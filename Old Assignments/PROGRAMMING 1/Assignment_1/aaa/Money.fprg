@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1757898"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-22 10:07:11 PM"/>
+        <attribute name="created" value="MTc1Nzg5ODsgUEUzMjYtMTU7IDIwMTctMDktMTU7IDEwOjU4OjAyIEFNOyAyMTk4"/>
+        <attribute name="edited" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE3LTA5LTIyOyAxMDowNzoxMSBQTTsgMzM0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="P" type="Integer" array="False" size=""/>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <declare name="D" type="Integer" array="False" size=""/>
+            <declare name="Q" type="Integer" array="False" size=""/>
+            <declare name="T" type="Real" array="False" size=""/>
+            <declare name="WIN" type="Real" array="False" size=""/>
+            <assign variable="WIN" expression="100"/>
+            <declare name="MoneyNeeded" type="Real" array="False" size=""/>
+            <output expression="&quot;input pennies&quot;"/>
+            <input variable="P"/>
+            <while expression="P &lt; 0">
+                <output expression="&quot;P!&lt;0&quot;"/>
+                <input variable="P"/>
+            </while>
+            <output expression="&quot;input nickels&quot;"/>
+            <input variable="N"/>
+            <while expression="N &lt; 0">
+                <output expression="&quot;N!&lt;0&quot;"/>
+                <input variable="N"/>
+            </while>
+            <output expression="&quot;input dimes&quot;"/>
+            <input variable="D"/>
+            <while expression="D &lt; 0">
+                <output expression="&quot;D!&lt;0&quot;"/>
+                <input variable="D"/>
+            </while>
+            <output expression="&quot;input quarters&quot;"/>
+            <input variable="Q"/>
+            <while expression="Q &lt; 0">
+                <output expression="&quot;Q!&lt;0&quot;"/>
+                <input variable="Q"/>
+            </while>
+            <assign variable="T" expression="P + N*5 + D*10 + Q*25"/>
+            <if expression="T == WIN">
+                <then>
+                    <output expression="&quot;yOU WIN&quot;"/>
+                </then>
+                <else>
+                    <if expression="T &gt; WIN">
+                        <then>
+                            <output expression="&quot;you lose&quot;"/>
+                            <assign variable="MoneyNeeded" expression="T - WIN"/>
+                            <output expression="&quot;You need &#162;&quot; &amp; MoneyNeeded &amp; &quot; less to get to $1&quot;"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;you lose&quot;"/>
+                            <assign variable="MoneyNeeded" expression="WIN - T"/>
+                            <output expression="&quot;You need &#162;&quot; &amp; MoneyNeeded &amp; &quot; more to get to $1&quot;"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;You have &#162;&quot; &amp; T"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

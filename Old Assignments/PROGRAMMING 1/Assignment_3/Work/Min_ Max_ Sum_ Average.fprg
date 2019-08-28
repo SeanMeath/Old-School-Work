@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-10 03:10:12 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDJXOyAyMDE3LTEwLTEwOyAwMjo1MzozOCBQTTsgMjI3MA=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDJXOyAyMDE3LTEwLTEwOyAwMzoxMDoxMiBQTTsgMjI1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numb" type="Real" array="False" size="" variables="Numb"/>
+            <declare name="Min" type="Real" array="False" size="" variables="Min"/>
+            <declare name="Max" type="Real" array="False" size="" variables="Max"/>
+            <declare name="Sum" type="Real" array="False" size="" variables="Sum"/>
+            <declare name="Average" type="Real" array="False" size="" variables="Average"/>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <output expression="&quot;Insert the first number.&quot;"/>
+            <input variable="Numb"/>
+            <assign variable="Sum" expression="0"/>
+            <assign variable="Min" expression="Numb"/>
+            <assign variable="Max" expression="Numb"/>
+            <do expression="Numb!=0">
+                <assign variable="Counter" expression="Counter+1"/>
+                <if expression="Numb&lt;Min">
+                    <then>
+                        <assign variable="Min" expression="Numb"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="Numb&gt;Max">
+                    <then>
+                        <assign variable="Max" expression="Numb"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="Sum" expression="Sum+Numb"/>
+                <output expression="&quot;Input number #&quot; &amp; Counter+1 &amp; &quot; or input 0 if you wish to input no more numbers.&quot;"/>
+                <input variable="Numb"/>
+            </do>
+            <assign variable="Average" expression="Sum/Counter"/>
+            <output expression="&quot;Min:&quot; &amp; Min"/>
+            <output expression="&quot;Max:&quot; &amp; Max"/>
+            <output expression="&quot;Sum:&quot; &amp; Sum"/>
+            <output expression="&quot;Average:&quot; &amp; Average"/>
+        </body>
+    </function>
+</flowgorithm>

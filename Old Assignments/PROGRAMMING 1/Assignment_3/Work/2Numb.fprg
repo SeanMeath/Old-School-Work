@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-10 03:52:04 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDJXOyAyMDE3LTEwLTEwOyAwMzoyNjo1MyBQTTsgMjI2OA=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDJXOyAyMDE3LTEwLTEwOyAwMzo1MjowNCBQTTsgMjI2Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numb" type="Integer" array="False" size="" variables="Numb"/>
+            <declare name="SmallNumb" type="Integer" array="False" size="" variables="SmallNumb"/>
+            <declare name="BigNumb" type="Integer" array="False" size="" variables="BigNumb"/>
+            <declare name="Answer" type="Integer" array="False" size="" variables="Answer"/>
+            <output expression="&quot;Please enter the first number.&quot;"/>
+            <input variable="Numb"/>
+            <while expression="Numb&lt;=0">
+                <output expression="&quot;Error! Number entered is not a psitive integer. Please try again.&quot;"/>
+                <input variable="Numb"/>
+            </while>
+            <assign variable="SmallNumb" expression="Numb"/>
+            <assign variable="BigNumb" expression="Numb"/>
+            <output expression="&quot;Please enter the second number.&quot;"/>
+            <input variable="Numb"/>
+            <while expression="Numb&lt;=0">
+                <output expression="&quot;Error! Number entered is not a psitive integer. Please try again.&quot;"/>
+                <input variable="Numb"/>
+            </while>
+            <if expression="Numb&gt;SmallNumb">
+                <then>
+                    <assign variable="BigNumb" expression="Numb"/>
+                </then>
+                <else>
+                    <assign variable="SmallNumb" expression="Numb"/>
+                </else>
+            </if>
+            <assign variable="Answer" expression="SmallNumb+1"/>
+            <do expression="Answer!=BigNumb">
+                <output expression="Answer"/>
+                <assign variable="Answer" expression="Answer+1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

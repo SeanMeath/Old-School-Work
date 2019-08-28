@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Sean Meath"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-02-04 11:46:15 PM"/>
+        <attribute name="created" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE4LTAyLTA0OyAwOTo0NToyMyBQTTsgMzM0OQ=="/>
+        <attribute name="edited" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE4LTAyLTA0OyAxMTo0NjoxNSBQTTsgMzM0NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Asks the user for the number of rooms, the area of each rooms and the cost for the paint used and computes the total cost. It then displays this to the user."/>
+            <declare name="MINCOST" type="Integer" array="False" size=""/>
+            <assign variable="MINCOST" expression="10"/>
+            <declare name="LABORCOST" type="Integer" array="False" size=""/>
+            <assign variable="LABORCOST" expression="18"/>
+            <declare name="rooms" type="Integer" array="False" size=""/>
+            <declare name="gallons" type="Real" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="intHours" type="Integer" array="False" size=""/>
+            <declare name="paintCost" type="Real" array="False" size=""/>
+            <declare name="paintTotal" type="Real" array="False" size=""/>
+            <declare name="laborTotal" type="Real" array="False" size=""/>
+            <declare name="totalCost" type="Real" array="False" size=""/>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many rooms need to be painted?&quot;"/>
+            <input variable="rooms"/>
+            <while expression="rooms&lt;=0">
+                <output expression="&quot;Error! The number of rooms must be bigger than 0. Please try again.&quot;"/>
+                <input variable="rooms"/>
+            </while>
+            <declare name="squareFeet" type="Real" array="True" size="rooms"/>
+            <for variable="counter" start="1" end="rooms" direction="inc" step="1">
+                <output expression="&quot;How many square feet of wall space needs to be painted in room #&quot; &amp; counter &amp; &quot;.&quot;"/>
+                <input variable="squareFeet[(counter-1)]"/>
+                <while expression="squareFeet[(counter-1)]&lt;=0">
+                    <output expression="&quot;Error the number of square feet must be bigger than 0. Please try again.&quot;"/>
+                    <output expression="&quot;How many square feet of wall space needs to be painted in room #&quot; &amp; counter &amp; &quot;.&quot;"/>
+                    <input variable="squareFeet[(counter-1)]"/>
+                </while>
+            </for>
+            <output expression="&quot;How much did the paint used cost?&quot;"/>
+            <input variable="paintCost"/>
+            <while expression="paintCost&lt;MINCOST">
+                <output expression="&quot;Error the cost of paint must be bigger or equal to 10. Please try again.&quot;"/>
+                <output expression="&quot;How much did the paint used cost?&quot;"/>
+                <input variable="paintCost"/>
+            </while>
+            <assign variable="hours" expression="GetHours(rooms, squareFeet)"/>
+            <assign variable="intHours" expression="int(hours)"/>
+            <if expression="hours&gt;intHours">
+                <then>
+                    <assign variable="gallons" expression="intHours+1"/>
+                </then>
+                <else>
+                    <assign variable="gallons" expression="intHours"/>
+                </else>
+            </if>
+            <assign variable="paintTotal" expression="gallons*paintCost"/>
+            <assign variable="laborTotal" expression="hours*laborCost"/>
+            <assign variable="totalCost" expression="laborTotal+paintCost"/>
+            <output expression="&quot;Gallons of paint used: &quot; &amp; gallons"/>
+            <output expression="&quot;Hours of work required: &quot; &amp; tofixed(hours, 2)"/>
+            <output expression="&quot;Paint total cost: $&quot; &amp; tofixed(paintTotal, 2)"/>
+            <output expression="&quot;Cost for the work: $&quot; &amp; tofixed(laborTotal, 2)"/>
+            <output expression="&quot;The total for the cost comes to: $&quot; &amp; tofixed(totalCost, 2)"/>
+        </body>
+    </function>
+    <function name="GetHours" type="Real" variable="hours">
+        <parameters>
+            <parameter name="rooms" type="Integer" array="False"/>
+            <parameter name="squareFeet" type="Real" array="True"/>
+        </parameters>
+        <body>
+            <declare name="SQUAREFEETPERGALLON" type="Integer" array="False" size=""/>
+            <assign variable="SQUAREFEETPERGALLON" expression="115"/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="sum" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <for variable="counter" start="0" end="(rooms-1)" direction="inc" step="1">
+                <assign variable="sum" expression="sum+squareFeet[counter]"/>
+            </for>
+            <assign variable="hours" expression="sum/SQUAREFEETPERGALLON"/>
+        </body>
+    </function>
+</flowgorithm>

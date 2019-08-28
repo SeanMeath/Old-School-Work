@@ -1,0 +1,7 @@
+C:\Users\Sean Meath\Desktop\Algo Assingment\a4v2-seanM\obj\Debug\a4v2-seanM.csprojAssemblyReference.cache
+C:\Users\Sean Meath\Desktop\Algo Assingment\a4v2-seanM\obj\Debug\a4v2-seanM.csproj.CoreCompileInputs.cache
+C:\Users\Sean Meath\Desktop\Algo Assingment\a4v2-seanM\bin\Debug\a4v2-seanM.exe.config
+C:\Users\Sean Meath\Desktop\Algo Assingment\a4v2-seanM\bin\Debug\a4v2-seanM.exe
+C:\Users\Sean Meath\Desktop\Algo Assingment\a4v2-seanM\bin\Debug\a4v2-seanM.pdb
+C:\Users\Sean Meath\Desktop\Algo Assingment\a4v2-seanM\obj\Debug\a4v2-seanM.exe
+C:\Users\Sean Meath\Desktop\Algo Assingment\a4v2-seanM\obj\Debug\a4v2-seanM.pdb

@@ -1,0 +1,7 @@
+C:\Users\Sean Meath\Desktop\sMEAT - a3\sMEAT - Baseline\bin\Debug\sMEAT - Baseline.exe.config
+C:\Users\Sean Meath\Desktop\sMEAT - a3\sMEAT - Baseline\bin\Debug\sMEAT - Baseline.exe
+C:\Users\Sean Meath\Desktop\sMEAT - a3\sMEAT - Baseline\bin\Debug\sMEAT - Baseline.pdb
+C:\Users\Sean Meath\Desktop\sMEAT - a3\sMEAT - Baseline\obj\Debug\sMEAT - Baseline.csprojAssemblyReference.cache
+C:\Users\Sean Meath\Desktop\sMEAT - a3\sMEAT - Baseline\obj\Debug\sMEAT - Baseline.csproj.CoreCompileInputs.cache
+C:\Users\Sean Meath\Desktop\sMEAT - a3\sMEAT - Baseline\obj\Debug\sMEAT - Baseline.exe
+C:\Users\Sean Meath\Desktop\sMEAT - a3\sMEAT - Baseline\obj\Debug\sMEAT - Baseline.pdb

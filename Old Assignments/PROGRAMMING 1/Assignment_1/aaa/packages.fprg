@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-22 10:25:27 PM"/>
+        <attribute name="created" value="cGF1bDsgUEFVTC1QQzsgMjAxNy0wOS0xNDsgMDk6MDg6MzcgUE07IDIzMjM="/>
+        <attribute name="edited" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE3LTA5LTIyOyAxMDoyNToyNyBQTTsgMzM0OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="DDP" type="Real" array="False" size=""/>
+            <declare name="RD" type="Real" array="False" size=""/>
+            <declare name="D1" type="Real" array="False" size=""/>
+            <assign variable="D1" expression="0.2"/>
+            <declare name="D2" type="Real" array="False" size=""/>
+            <assign variable="D2" expression="0.3"/>
+            <declare name="D3" type="Real" array="False" size=""/>
+            <assign variable="D3" expression="0.4"/>
+            <declare name="D4" type="Real" array="False" size=""/>
+            <assign variable="D4" expression="0.5"/>
+            <declare name="P" type="Integer" array="False" size=""/>
+            <declare name="PP" type="Real" array="False" size=""/>
+            <assign variable="PP" expression="99"/>
+            <declare name="TC" type="Real" array="False" size=""/>
+            <declare name="DP" type="Real" array="False" size=""/>
+            <declare name="D" type="Real" array="False" size=""/>
+            <declare name="PD" type="Real" array="False" size=""/>
+            <declare name="S1" type="Real" array="False" size=""/>
+            <assign variable="S1" expression="10"/>
+            <declare name="S2" type="Real" array="False" size=""/>
+            <assign variable="S2" expression="19"/>
+            <declare name="S3" type="Real" array="False" size=""/>
+            <assign variable="S3" expression="49"/>
+            <declare name="S4" type="Real" array="False" size=""/>
+            <assign variable="S4" expression="99"/>
+            <output expression="&quot;input pakages&quot;"/>
+            <input variable="P"/>
+            <assign variable="TC" expression="P * PP"/>
+            <if expression="P &lt; S1">
+                <then>
+                    <output expression="&quot;Total cost $&quot; &amp; TC"/>
+                </then>
+                <else>
+                    <if expression="P &lt;= S2">
+                        <then>
+                            <assign variable="RD" expression="D1"/>
+                        </then>
+                        <else>
+                            <if expression="P &lt;= S3">
+                                <then>
+                                    <assign variable="RD" expression="D2"/>
+                                </then>
+                                <else>
+                                    <if expression="P &lt;= S4">
+                                        <then>
+                                            <assign variable="RD" expression="D3"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="RD" expression="D4"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <assign variable="D" expression="TC * RD"/>
+                    <assign variable="DDP" expression="TC - D"/>
+                    <assign variable="PD" expression="RD * 100"/>
+                    <output expression="&quot;Total cost without discount $&quot; &amp; TC"/>
+                    <output expression="&quot;You have a Discount of $&quot; &amp; D"/>
+                    <output expression="&quot;The Total cost is $&quot; &amp; DDP"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

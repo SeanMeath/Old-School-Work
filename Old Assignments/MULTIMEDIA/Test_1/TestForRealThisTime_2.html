@@ -1,0 +1,80 @@
+<!DOCTYPE>
+<html>
+	<body>
+		<script>
+			var sugarStore =
+			{
+				maxSugarCapacityInPounds: 1000,
+				currentSugarReservesInPounds: 750,
+				acceptingDeliveries: true,
+				
+				acceptDelivery: function(x)
+				{
+					x = x * 2.20462;
+					if(this.acceptingDeliveries == true)
+					{
+						this.currentSugarReservesInPounds += x;
+						if(this.currentSugarReservesInPounds > this.maxSugarCapacityInPounds)
+						{
+							this.currentSugarReservesInPounds = this.maxSugarCapacityInPounds;
+							this.acceptingDeliveries = false;
+						}
+					}
+				},
+				
+				fillOrder: function(x)
+				{
+					this.currentSugarReservesInPounds -= x;
+					this.acceptingDeliveries = true;
+					if(this.currentSugarReservesInPounds < 0)
+					{
+						this.currentSugarReservesInPounds = 0;
+					}
+				},
+				
+				getOrderCost: function(x)
+				{
+					x = x * 2.20462;
+					var r;
+					if(x <= this.currentSugarReservesInPounds)
+					{
+						if((this.currentSugarReservesInPounds/this.maxSugarCapacityInPounds)<0.26)
+							r = 2.23
+						else
+							r = 1.67
+						return(r*x);
+					}
+					else
+					{
+						console.log('Cannot fulfill order request (not enough sugar)')
+						return(0);
+					}
+				},
+				
+				isAcceptingDeliveries: function()
+				{
+					return(this.acceptingDeliveries);
+				}
+			}
+			
+			
+			
+			
+			console.log(sugarStore.maxSugarCapacityInPounds);
+			console.log(sugarStore.currentSugarReservesInPounds);
+			console.log(sugarStore.isAcceptingDeliveries());
+			
+			sugarStore.acceptDelivery(500);
+			console.log(sugarStore.currentSugarReservesInPounds);
+			console.log(sugarStore.getOrderCost(1000/2.20462));
+			sugarStore.fillOrder(1000);
+			console.log(sugarStore.currentSugarReservesInPounds);
+			sugarStore.acceptDelivery(50);
+			console.log(sugarStore.currentSugarReservesInPounds);
+			
+			console.log(sugarStore.getOrderCost(1));
+			sugarStore.fillOrder(1);
+			console.log(sugarStore.currentSugarReservesInPounds);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!Doctype HTML>
+<HTML>
+    <HEAD>
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </HEAD>
+    <BODY>
+        <canvas id="Canvas" width="600" height="400"></canvas>
+        <script>
+            var Canv = document.getElementById("Canvas");
+            var ctx = Canv.getContext("2d");
+            var xSplit = Canv.clientWidth/2;
+            var ySplit = Canv.clientHeight/2;
+            var quadrant = 0;
+            var timer = 0;
+            var Aliens = new Array();
+            Animate();
+
+            function alienBox(){
+                this.Color = "Green";
+                var xStart;
+                var yStart;
+                var xEnd;
+                var yEnd;
+                switch(quadrant){
+                    case 1:
+                        xStart = 0;
+                        yStart = 0;
+                        xEnd = xSplit;
+                        yEnd = ySplit;
+                        break;
+                    case 2:
+                        xStart = xSplit;
+                        yStart = 0;
+                        xEnd = Canv.clientWidth;
+                        yEnd = ySplit;
+                        break;
+                    case 3:
+                        xStart = 0;
+                        yStart = ySplit;
+                        xEnd = xSplit;
+                        yEnd = Canv.clientHeight;
+                        break;
+                    case 4:
+                        xStart = xSplit;
+                        yStart = ySplit;
+                        xEnd = Canv.clientWidth;
+                        yEnd = Canv.clientHeight;
+                        break;
+                }
+                this.Speed = 1;
+                this.Size = 15;
+                this.Xpos = generateNumber(xStart, xEnd-this.Size);
+                this.Ypos = generateNumber(yStart, yEnd-this.Size);
+                this.Angle = generateNumber(0, 360);
+            }
+
+            function Animate(){
+                setTimeout(function(){
+                    requestAnimationFrame(Animate, 500);
+                    ctx.clearRect(0, 0, Canv.clientWidth, Canv.clientHeight);
+                    Move();
+                    Colision();
+                    Draw();
+                }, 1000 / 50);
+            }
+
+            function Move(){
+                var Xunits;
+                var Yunits;
+                var rAngle;
+                Aliens.forEach(function(c){
+                    rAngle = c.Angle * Math.PI / 180;
+                    Xunits = Math.cos(rAngle) * c.Speed;
+                    Yunits = Math.sin(rAngle) * c.Speed;
+                    c.Xpos += Xunits;
+                    c.Ypos += Yunits
+                });
+            }
+
+            function Colision(){
+                Aliens.forEach(function(c){
+                    if(c.Xpos + c.Size > Canv.clientWidth || c.Xpos < 0){
+                        c.Color = "Blue";
+                        c.Angle = 180 - c.Angle;
+                    }
+                    else if(c.Ypos + c.Size > Canv.clientHeight || c.Ypos < 0){
+                        c.Color = "Yellow";
+                        c.Angle = 360 - c.Angle;
+                    }
+                });
+            }
+
+            function Draw(){
+                if(timer % 25 == 0){
+                    quadrant ++;
+                    if(quadrant >= 5){
+                        quadrant = 1;
+                    }
+                   Aliens.push(new alienBox);
+                }
+                timer++;
+                Aliens.forEach(function(c){
+                    ctx.fillStyle = c.Color;
+                    ctx.fillRect(c.Xpos, c.Ypos, c.Size, c.Size);
+                });
+            }
+
+            document.addEventListener("keypress", function(c){
+                var key = c.keyCode;
+                var removeArr = new Array();
+                var dlt = false;
+                if(key === 81){
+                    Aliens.forEach(function(c, i){
+                        dlt = (c.Xpos + c.Size >= xSplit && c.Ypos + c.Size >= ySplit);
+                        while(dlt){
+                            Aliens.splice(i, 1);
+                            dlt = (Aliens[i].Xpos + Aliens[i].Size >= xSplit && Aliens[i].Ypos + Aliens[i].Size >= ySplit);
+                        }
+                    });
+                }
+            });
+
+            function generateNumber(min , max)
+            {
+                return Math.floor(Math.random() * (max-min) + min);
+            }
+            
+        </script>
+
+    </BODY>
+</HTML>

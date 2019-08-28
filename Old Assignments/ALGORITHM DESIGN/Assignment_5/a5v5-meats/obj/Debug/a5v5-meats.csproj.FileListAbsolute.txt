@@ -1,0 +1,14 @@
+C:\Users\Sean Meath\Desktop\a5 stacks pkge#2\a5v5-meats\bin\Debug\a5v5-meats.exe.config
+C:\Users\Sean Meath\Desktop\a5 stacks pkge#2\a5v5-meats\bin\Debug\a5v5-meats.exe
+C:\Users\Sean Meath\Desktop\a5 stacks pkge#2\a5v5-meats\bin\Debug\a5v5-meats.pdb
+C:\Users\Sean Meath\Desktop\a5 stacks pkge#2\a5v5-meats\obj\Debug\a5v5-meats.csprojAssemblyReference.cache
+C:\Users\Sean Meath\Desktop\a5 stacks pkge#2\a5v5-meats\obj\Debug\a5v5-meats.csproj.CoreCompileInputs.cache
+C:\Users\Sean Meath\Desktop\a5 stacks pkge#2\a5v5-meats\obj\Debug\a5v5-meats.exe
+C:\Users\Sean Meath\Desktop\a5 stacks pkge#2\a5v5-meats\obj\Debug\a5v5-meats.pdb
+C:\Users\Sean Meath\Desktop\asst5-meatsFIVE\a5v5-meats\bin\Debug\a5v5-meats.exe.config
+C:\Users\Sean Meath\Desktop\asst5-meatsFIVE\a5v5-meats\bin\Debug\a5v5-meats.exe
+C:\Users\Sean Meath\Desktop\asst5-meatsFIVE\a5v5-meats\bin\Debug\a5v5-meats.pdb
+C:\Users\Sean Meath\Desktop\asst5-meatsFIVE\a5v5-meats\obj\Debug\a5v5-meats.csprojAssemblyReference.cache
+C:\Users\Sean Meath\Desktop\asst5-meatsFIVE\a5v5-meats\obj\Debug\a5v5-meats.csproj.CoreCompileInputs.cache
+C:\Users\Sean Meath\Desktop\asst5-meatsFIVE\a5v5-meats\obj\Debug\a5v5-meats.exe
+C:\Users\Sean Meath\Desktop\asst5-meatsFIVE\a5v5-meats\obj\Debug\a5v5-meats.pdb

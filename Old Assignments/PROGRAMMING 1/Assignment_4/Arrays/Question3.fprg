@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-20 04:42:20 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTIwOyAwMzozNjozMyBQTTsgMjI3MA=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTIwOyAwNDo0MjoyMCBQTTsgMjI2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ARRAYSIZE" type="Integer" array="False" size="" variables="ARRAYSIZE"/>
+            <assign variable="ARRAYSIZE" expression="7"/>
+            <declare name="IDs" type="Integer" array="True" size="ARRAYSIZE" variables="IDs[ARRAYSIZE]"/>
+            <comment text="IDs Array"/>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <declare name="ID1" type="Integer" array="False" size="" variables="ID1"/>
+            <assign variable="ID1" expression="56588"/>
+            <assign variable="IDs[Counter]" expression="ID1"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="ID2" type="Integer" array="False" size="" variables="ID2"/>
+            <assign variable="ID2" expression="45201"/>
+            <assign variable="IDs[Counter]" expression="ID2"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="ID3" type="Integer" array="False" size="" variables="ID3"/>
+            <assign variable="ID3" expression="78951"/>
+            <assign variable="IDs[Counter]" expression="ID3"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="ID4" type="Integer" array="False" size="" variables="ID4"/>
+            <assign variable="ID4" expression="87775"/>
+            <assign variable="IDs[Counter]" expression="ID4"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="ID5" type="Integer" array="False" size="" variables="ID5"/>
+            <assign variable="ID5" expression="84512"/>
+            <assign variable="IDs[Counter]" expression="ID5"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="ID6" type="Integer" array="False" size="" variables="ID6"/>
+            <assign variable="ID6" expression="13028"/>
+            <assign variable="IDs[Counter]" expression="ID6"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="ID7" type="Integer" array="False" size="" variables="ID7"/>
+            <assign variable="ID7" expression="75804"/>
+            <assign variable="IDs[Counter]" expression="ID7"/>
+            <comment text="Hours Array"/>
+            <declare name="Hours" type="Integer" array="True" size="ARRAYSIZE" variables="Hours[ARRAYSIZE]"/>
+            <assign variable="Counter" expression="0"/>
+            <while expression="Counter&lt;ARRAYSIZE">
+                <output expression="&quot;Please enter the hours worked by employee #&quot; &amp; IDs[Counter]"/>
+                <input variable="Hours[Counter]"/>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+            <comment text="PayRate Array"/>
+            <declare name="PayRates" type="Real" array="True" size="ARRAYSIZE" variables="PayRates[ARRAYSIZE]"/>
+            <assign variable="Counter" expression="0"/>
+            <while expression="Counter&lt;ARRAYSIZE">
+                <output expression="&quot;Please enter the payrate of employee #&quot; &amp; IDs[Counter]"/>
+                <input variable="PayRates[Counter]"/>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+            <comment text="Gross Wages Array"/>
+            <declare name="GrossWages" type="Real" array="True" size="ARRAYSIZE" variables="GrossWages[ARRAYSIZE]"/>
+            <assign variable="Counter" expression="0"/>
+            <while expression="Counter&lt;ARRAYSIZE">
+                <assign variable="GrossWages[Counter]" expression="Hours[Counter]*PayRates[Counter]"/>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+            <call expression="PrintInfo(IDs,GrossWages,ARRAYSIZE)"/>
+        </body>
+    </function>
+    <function name="PrintInfo" type="None" variable="">
+        <parameters>
+            <parameter name="D1" type="Integer" array="True"/>
+            <parameter name="D2" type="Real" array="True"/>
+            <parameter name="D3" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <while expression="Counter&lt;D3">
+                <output expression="&quot;Employee #&quot; &amp; D1[Counter] &amp; &quot;: &quot; &amp; D2[Counter] &amp; &quot;$&quot;"/>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

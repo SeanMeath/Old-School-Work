@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-29 02:46:25 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTA5LTIyOyAwMzo1Mjo0NCBQTTsgMjI4MA=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTA5LTI5OyAwMjo0NjoyNSBQTTsgMjI4OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TRY" type="Integer" array="False" size="" variables="TRY"/>
+            <assign variable="TRY" expression="0"/>
+            <declare name="GUESS" type="Integer" array="False" size="" variables="GUESS"/>
+            <declare name="NUMB" type="Integer" array="False" size="" variables="NUMB"/>
+            <assign variable="NUMB" expression="Random(100)"/>
+            <output expression="&quot;GUESS THE NUMBER&quot;"/>
+            <do expression="GUESS!=NUMB">
+                <assign variable="TRY" expression="TRY+1"/>
+                <input variable="GUESS"/>
+                <if expression="GUESS!=NUMB">
+                    <then>
+                        <if expression="GUESS&gt;NUMB">
+                            <then>
+                                <output expression="&quot;TOO BIG! TRY AGAIN. :(&quot;"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;TOO SMALL! TRY AGAIN. :(&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;CONGRADULATIONS! YOU WIN!&quot;"/>
+            <output expression="&quot;IT TOOK YOU &quot; &amp; TRY &amp; &quot; TRIES.&quot;"/>
+        </body>
+    </function>
+</flowgorithm>

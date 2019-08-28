@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-22 10:33:42 PM"/>
+        <attribute name="created" value="cGF1bDsgUEFVTC1QQzsgMjAxNy0wOS0xNDsgMDg6NTA6MTYgUE07IDIzMTY="/>
+        <attribute name="edited" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE3LTA5LTIyOyAxMDozMzo0MiBQTTsgMzM0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="R1W" type="Real" array="False" size=""/>
+            <declare name="R1L" type="Real" array="False" size=""/>
+            <declare name="R1T" type="Real" array="False" size=""/>
+            <declare name="R2W" type="Real" array="False" size=""/>
+            <declare name="R2L" type="Real" array="False" size=""/>
+            <declare name="R2T" type="Real" array="False" size=""/>
+            <output expression="&quot;input rectangle 1's width&quot;"/>
+            <input variable="R1W"/>
+            <if expression="R1W &lt;= 0">
+                <then>
+                    <do expression="R1W &lt;= 0">
+                        <output expression="&quot;mesurement cant be &lt;= 0&quot;"/>
+                        <input variable="R1W"/>
+                    </do>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;input rectangle 1's length&quot;"/>
+            <input variable="R1L"/>
+            <if expression="R1L &lt;= 0">
+                <then>
+                    <do expression="R1L &lt;= 0">
+                        <output expression="&quot;mesurement cant be &lt;= 0&quot;"/>
+                        <input variable="R1L"/>
+                    </do>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;input rectangle 2's width&quot;"/>
+            <input variable="R2W"/>
+            <if expression="R2W &lt;= 0">
+                <then>
+                    <do expression="R2W &lt;= 0">
+                        <output expression="&quot;mesurement cant be &lt;= 0&quot;"/>
+                        <input variable="R2W"/>
+                    </do>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;input rectangle 2's length&quot;"/>
+            <input variable="R2L"/>
+            <if expression="R2L &lt;= 0">
+                <then>
+                    <do expression="R2L &lt;= 0">
+                        <output expression="&quot;mesurement cant be &lt;= 0&quot;"/>
+                        <input variable="R2L"/>
+                    </do>
+                </then>
+                <else/>
+            </if>
+            <assign variable="R1T" expression="R1W * R1L"/>
+            <assign variable="R2T" expression="R2W * R2L"/>
+            <if expression="R1T &gt; R2T">
+                <then>
+                    <output expression="&quot;Rectangle 1 has a greater area&quot;"/>
+                </then>
+                <else>
+                    <if expression="R1T = R2T">
+                        <then>
+                            <output expression="&quot;Both rectangles have the same area&quot;"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Rectangle 2 has a greater area&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

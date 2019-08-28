@@ -1,0 +1,14 @@
+Emp #       Last Name      First Name Time Worked Hourly Wage       Pay
+----- --------------- --------------- ----------- ----------- ---------
+ 5342          Peters           Peter    35:42:00      $15.00   $535.50
+ 1121           Smith           Brian    18:14:00      $12.75   $232.47
+ 8343           Jones            Nora    14:45:00      $15.00   $221.25
+ 4231           White           Allan    13:56:00       $9.00   $125.40
+ 2745           Brown            Jane    13:43:00       $8.50   $116.59
+ 2002           Clark            Mary    11:58:00      $10.00   $119.67
+ 9223         Edwards             Kim    06:00:00      $13.00    $78.00
+ 2341           Young             Ann    02:11:00      $13.00    $28.38
+ 5566            Moss           Peter    01:00:00      $13.45    $13.45
+
+Total Time Worked = 117:29:00
+Total Pay = 1470.72

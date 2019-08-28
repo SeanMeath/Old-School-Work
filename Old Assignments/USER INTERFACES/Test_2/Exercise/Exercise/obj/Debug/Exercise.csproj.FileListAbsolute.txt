@@ -1,0 +1,30 @@
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise.csprojResolveAssemblyReference.cache
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\MainWindow.g.cs
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\App.g.cs
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise_MarkupCompile.cache
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise_MarkupCompile.lref
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\bin\Debug\Exercise.exe.config
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\bin\Debug\Exercise.exe
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\bin\Debug\Exercise.pdb
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\MainWindow.baml
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise.g.resources
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise.Properties.Resources.resources
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise.csproj.GenerateResource.Cache
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise.csproj.CoreCompileInputs.cache
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise.exe
+C:\Users\sandra.bultena\Google Drive\UI\2018\Projects\Exercise\Exercise\obj\Debug\Exercise.pdb
+C:\Users\1753546\Desktop\Exercise\Exercise\bin\Debug\Exercise.exe.config
+C:\Users\1753546\Desktop\Exercise\Exercise\bin\Debug\Exercise.exe
+C:\Users\1753546\Desktop\Exercise\Exercise\bin\Debug\Exercise.pdb
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise.csprojResolveAssemblyReference.cache
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\MainWindow.g.cs
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\App.g.cs
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise_MarkupCompile.cache
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise_MarkupCompile.lref
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\MainWindow.baml
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise.g.resources
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise.Properties.Resources.resources
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise.csproj.GenerateResource.Cache
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise.csproj.CoreCompileInputs.cache
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise.exe
+C:\Users\1753546\Desktop\Exercise\Exercise\obj\Debug\Exercise.pdb

@@ -1,0 +1,7 @@
+D:\Desktop\Weather Stats\Weather Stats\obj\Debug\Weather Stats.csprojResolveAssemblyReference.cache
+D:\Desktop\Weather Stats\Weather Stats\obj\Debug\Weather Stats.csproj.CoreCompileInputs.cache
+D:\Desktop\Weather Stats\Weather Stats\bin\Debug\Weather Stats.exe.config
+D:\Desktop\Weather Stats\Weather Stats\bin\Debug\Weather Stats.exe
+D:\Desktop\Weather Stats\Weather Stats\bin\Debug\Weather Stats.pdb
+D:\Desktop\Weather Stats\Weather Stats\obj\Debug\Weather Stats.exe
+D:\Desktop\Weather Stats\Weather Stats\obj\Debug\Weather Stats.pdb

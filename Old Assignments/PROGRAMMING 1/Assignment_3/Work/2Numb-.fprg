@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-11 03:02:25 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTExOyAwMjoyODozOCBQTTsgMjI3NQ=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTExOyAwMzowMjoyNSBQTTsgMjI2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numb" type="Integer" array="False" size="" variables="Numb"/>
+            <declare name="SmallNumb" type="Integer" array="False" size="" variables="SmallNumb"/>
+            <declare name="BigNumb" type="Integer" array="False" size="" variables="BigNumb"/>
+            <declare name="Timer" type="Integer" array="False" size="" variables="Timer"/>
+            <output expression="&quot;Input the first negative integer.&quot;"/>
+            <input variable="Numb"/>
+            <while expression="Numb&gt;=0">
+                <output expression="&quot;Error! Number entered was not a negative integer. Please try again.&quot;"/>
+                <input variable="Numb"/>
+            </while>
+            <assign variable="SmallNumb" expression="Numb"/>
+            <assign variable="BigNumb" expression="Numb"/>
+            <output expression="&quot;Input the second negative integer.&quot;"/>
+            <input variable="Numb"/>
+            <while expression="Numb&gt;=0">
+                <output expression="&quot;Error! Number entered was not a negative integer. Please try again.&quot;"/>
+                <input variable="Numb"/>
+            </while>
+            <if expression="Numb&gt;SmallNumb">
+                <then>
+                    <assign variable="BigNumb" expression="Numb"/>
+                </then>
+                <else>
+                    <assign variable="SmallNumb" expression="Numb"/>
+                </else>
+            </if>
+            <for variable="Timer" start="SmallNumb" end="BigNumb" direction="inc" step="1">
+                <output expression="Timer"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

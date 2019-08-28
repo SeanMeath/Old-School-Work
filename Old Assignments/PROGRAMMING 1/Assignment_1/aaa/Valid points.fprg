@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paul"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-22 10:35:43 PM"/>
+        <attribute name="created" value="cGF1bDsgUEFVTC1QQzsgMjAxNy0wOS0xNDsgMDg6NDI6NTMgUE07IDIzMTg="/>
+        <attribute name="edited" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE3LTA5LTIyOyAxMDozNTo0MyBQTTsgMzM0OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="MIN" type="Real" array="False" size=""/>
+            <assign variable="MIN" expression="9"/>
+            <declare name="MAX" type="Real" array="False" size=""/>
+            <assign variable="MAX" expression="51"/>
+            <declare name="VP" type="Real" array="False" size=""/>
+            <output expression="&quot;input points&quot;"/>
+            <input variable="VP"/>
+            <if expression="VP &lt; MIN or VP &gt; MAX">
+                <then>
+                    <do expression="VP &lt; MIN or VP &gt; MAX">
+                        <output expression="&quot;ERROR INVALID POINTS&quot;"/>
+                        <output expression="&quot;PLEASE PUT A VALID NUMBER&quot;"/>
+                        <input variable="VP"/>
+                    </do>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;VALID POINTS&quot;"/>
+        </body>
+    </function>
+</flowgorithm>

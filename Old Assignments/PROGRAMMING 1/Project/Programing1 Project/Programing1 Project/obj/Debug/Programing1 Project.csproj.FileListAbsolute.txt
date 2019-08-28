@@ -1,0 +1,6 @@
+C:\Users\1753546\Desktop\Programing1 Project\Programing1 Project\bin\Debug\Programing1 Project.exe.config
+C:\Users\1753546\Desktop\Programing1 Project\Programing1 Project\bin\Debug\Programing1 Project.exe
+C:\Users\1753546\Desktop\Programing1 Project\Programing1 Project\bin\Debug\Programing1 Project.pdb
+C:\Users\1753546\Desktop\Programing1 Project\Programing1 Project\obj\Debug\Programing1 Project.csprojResolveAssemblyReference.cache
+C:\Users\1753546\Desktop\Programing1 Project\Programing1 Project\obj\Debug\Programing1 Project.exe
+C:\Users\1753546\Desktop\Programing1 Project\Programing1 Project\obj\Debug\Programing1 Project.pdb

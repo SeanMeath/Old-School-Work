@@ -1,0 +1,7 @@
+C:\Users\Sean Meath\Desktop\a4v4-meats\obj\Debug\a4v4-meats.csprojAssemblyReference.cache
+C:\Users\Sean Meath\Desktop\a4v4-meats\obj\Debug\a4v4-meats.csproj.CoreCompileInputs.cache
+C:\Users\Sean Meath\Desktop\a4v4-meats\bin\Debug\a4v4-meats.exe.config
+C:\Users\Sean Meath\Desktop\a4v4-meats\bin\Debug\a4v4-meats.exe
+C:\Users\Sean Meath\Desktop\a4v4-meats\bin\Debug\a4v4-meats.pdb
+C:\Users\Sean Meath\Desktop\a4v4-meats\obj\Debug\a4v4-meats.exe
+C:\Users\Sean Meath\Desktop\a4v4-meats\obj\Debug\a4v4-meats.pdb

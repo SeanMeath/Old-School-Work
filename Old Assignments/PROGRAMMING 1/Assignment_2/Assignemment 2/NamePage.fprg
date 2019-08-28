@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-22 05:14:57 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTA5LTIyOyAwNDozNDo0OSBQTTsgMjI4Ng=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTA5LTIyOyAwNToxNDo1NyBQTTsgMjI4NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="OLDESTNAME" type="String" array="False" size="" variables="OLDESTNAME"/>
+            <declare name="OLDESTAGE" type="Real" array="False" size="" variables="OLDESTAGE"/>
+            <assign variable="OLDESTAGE" expression="0"/>
+            <declare name="NAME" type="String" array="False" size="" variables="NAME"/>
+            <declare name="AGE" type="Integer" array="False" size="" variables="AGE"/>
+            <output expression="&quot;INPUT A NAME&quot;"/>
+            <input variable="NAME"/>
+            <do expression="NAME!=&quot;end&quot;">
+                <output expression="&quot;INPUT &quot; &amp; NAME &amp; &quot;'S AGE&quot;"/>
+                <input variable="AGE"/>
+                <if expression="OLDESTAGE&lt;AGE">
+                    <then>
+                        <assign variable="OLDESTAGE" expression="AGE"/>
+                        <assign variable="OLDESTNAME" expression="NAME"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;INPUT ANOTHER NAME&quot;"/>
+                <input variable="NAME"/>
+            </do>
+            <output expression="&quot;OLDEST PERSON IS: &quot; &amp; OLDESTNAME &amp; &quot;. WHO IS: &quot; &amp; OLDESTAGE &amp; &quot; YEARS OLD.&quot;"/>
+        </body>
+    </function>
+</flowgorithm>

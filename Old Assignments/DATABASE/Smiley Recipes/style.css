@@ -1,0 +1,126 @@
+body, html{
+    background-color: dimgray;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul{
+    list-style: none;
+    display: block;
+}
+
+#topNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+#topNav li{
+    float: left;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+#topNav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+#topNav li a:hover {
+    background-color: #111;
+}
+
+#topNav .active {
+    background-color: palevioletred;
+}
+
+#topNav .active:hover {
+    background-color: purple;
+}
+
+#searchBar{
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+#searchButton{
+    float: right;
+    padding: 6px;
+    border: none;
+    background: palevioletred;
+    color: white;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: purple;
+}
+
+#mainPage{
+    padding-top: 35px;
+}
+
+ul.striped-list{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+ul.striped-list.review{
+    width: 60%;
+}
+
+ul.striped-list li{
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+ul.striped-list > li:nth-of-type(odd){
+    background-color: darkgrey;
+}
+
+ul.striped-list a{
+    text-decoration: none;
+    color: black;
+}
+
+img{ 
+    width: 30%; 
+    height: 30%;
+    float: right;
+}
+
+.recipeTile img{ 
+    width: 215px; 
+    height: 215px;
+    float: right;
+}
+
+h1, p{
+    padding-left: 10px;
+}
+
+#comment{
+    background-color: palevioletred;
+    width: 25%;
+}
+
+#convert{
+    background-color: palevioletred;
+    width: 25%;
+}

@@ -1,0 +1,9 @@
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\obj\Debug\meatSeTwins.csprojAssemblyReference.cache
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\obj\Debug\meatSeTwins.Properties.Resources.resources
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\obj\Debug\meatSeTwins.csproj.GenerateResource.cache
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\obj\Debug\meatSeTwins.csproj.CoreCompileInputs.cache
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\bin\Debug\meatSeTwins.exe.config
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\bin\Debug\meatSeTwins.exe
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\bin\Debug\meatSeTwins.pdb
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\obj\Debug\meatSeTwins.exe
+C:\Users\Sean Meath\Desktop\New folder\meatSeTwins\obj\Debug\meatSeTwins.pdb

@@ -1,0 +1,6 @@
+C:\Users\1753546\Desktop\Assingment5\Assingment5\bin\Debug\Assingment5.exe.config
+C:\Users\1753546\Desktop\Assingment5\Assingment5\bin\Debug\Assingment5.exe
+C:\Users\1753546\Desktop\Assingment5\Assingment5\bin\Debug\Assingment5.pdb
+C:\Users\1753546\Desktop\Assingment5\Assingment5\obj\Debug\Assingment5.csprojResolveAssemblyReference.cache
+C:\Users\1753546\Desktop\Assingment5\Assingment5\obj\Debug\Assingment5.exe
+C:\Users\1753546\Desktop\Assingment5\Assingment5\obj\Debug\Assingment5.pdb

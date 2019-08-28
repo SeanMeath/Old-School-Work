@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-10 03:25:45 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDJXOyAyMDE3LTEwLTEwOyAwMzoxMDo1MiBQTTsgMjI2MA=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDJXOyAyMDE3LTEwLTEwOyAwMzoyNTo0NSBQTTsgMjI2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numb" type="Integer" array="False" size="" variables="Numb"/>
+            <output expression="&quot;Please enter a positive integer.&quot;"/>
+            <input variable="Numb"/>
+            <while expression="Numb&lt;=0">
+                <output expression="&quot;Error! Number entered is not a positive integer. Please try again.&quot;"/>
+                <input variable="Numb"/>
+            </while>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <declare name="Counter2" type="Integer" array="False" size="" variables="Counter2"/>
+            <assign variable="Counter2" expression="2"/>
+            <declare name="Increment" type="Integer" array="False" size="" variables="Increment"/>
+            <declare name="Result" type="Integer" array="False" size="" variables="Result"/>
+            <for variable="Counter" start="1" end="Numb" direction="inc" step="1">
+                <assign variable="Result" expression="Counter"/>
+                <for variable="Increment" start="1" end="Counter2" direction="inc" step="1">
+                    <assign variable="Result" expression="Result*Counter"/>
+                </for>
+                <output expression="Result"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

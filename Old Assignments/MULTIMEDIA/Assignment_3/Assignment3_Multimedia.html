@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <HEAD>
+            <link rel="stylesheet" type="text/css" href="style.css"></head>
+            <br>
+    </HEAD>
+    <body>
+        <form action="javascript:Search();" id="form">
+            Place: <input type="text" name="place" id="p"><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <table id="tb">
+            <th>City</th><th>Country</th><th>Description</th><th>Weather</th><th>Wind</th><th>Degrees</th><th>Humidity</th>
+        </table>
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $( "#form" ).submit(function( event ) {
+                event.preventDefault();
+                $.ajax({
+                url: "http://api.openweathermap.org/data/2.5/weather?q="+$('#p').val()+"&units=metric"+"&APPID=29c5b2a3e82d2d9ece497c88bcae9ff8",
+                success: function(response) {
+                    console.log(response);
+                    var tbl = $("#tb");
+                    var things = `<tr><td>${response.name}</td><td><img src="http://openweathermap.org/images/flags/${response.sys.country.toLowerCase()}.png"></td>
+                    <td>${response.weather[0].description}</td><td><img src="http://openweathermap.org/img/w/${response.weather[0].icon}.png"></td>
+                    <td>${response.wind.speed}m/s</td><td>${response.main.temp}C</td><td>${response.main.humidity}</td></tr>`;
+                    tbl.append(things);
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                    alert("Error 404: City not Found"); 
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

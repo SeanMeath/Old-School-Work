@@ -1,0 +1,241 @@
+
+In asg4.sh line 14:
+declare -rix NUM_PROCESSES=`wc -l $PROCESS_FILE | egrep -o '^[^ ]* '`
+                           ^-- SC2006: Use $(..) instead of deprecated `..`
+
+
+In asg4.sh line 15:
+declare -arx PROCESS_INDEXES=(`seq 0 $(( $NUM_PROCESSES - 1 ))`)
+                              ^-- SC2006: Use $(..) instead of deprecated `..`
+                                         ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 33:
+    for ((i=1; $i<=$endL; i++)); do
+               ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                   ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 37:
+    eval $retVal_="${begin%%,*}"
+         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 57:
+        setField $proc 'agedPriority' $prio
+                                      ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 59:
+        setField $proc 'remainingBurstTime' $burstTime
+                                            ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 75:
+    eval $ret="$sum"
+         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 104:
+    eval $output_="(${eligibleProcs[*]})"
+         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 113:
+    getEligibleProcesses $currentTime_ $lastProc_ 'eligibleArr'
+                         ^-- SC2086: Double quote to prevent globbing and word splitting.
+                                       ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 116:
+        eval $ret_="-1"
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 121:
+    local eligibleIndexes=(`seq 0 $(( $numEligibleProcs - 1 ))`)
+                           ^-- SC2006: Use $(..) instead of deprecated `..`
+                                      ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 149:
+    eval $ret_="${eligibleArr[$indexToRemove]}"
+         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 150:
+    unset eligibleArr[$indexToRemove]
+                     ^-- SC2102: Ranges can only match single chars (mentioned due to duplicates).
+
+
+In asg4.sh line 172:
+    getField $procToRun_ 'remainingBurstTime' procRemBurst
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 173:
+    getField $procToRun_ 'remainingTime' procRemTime
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 180:
+        getField $procToRun_ 'burstTime' burst
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 181:
+        setField $procId 'remainingBurstTime' $burst
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 183:
+        newAvailTime=$(($curTime_+$IO_BLOCKTIME+$rt))
+                        ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                  ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                                ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 184:
+        setField $procId 'availTime' $newAvailTime
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 186:
+        setField $procToRun_ 'numAgingSkips' 0
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 189:
+        newBurst=$(($procRemBurst-$QUANTUM))
+                    ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                  ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 190:
+        setField $procId 'remainingBurstTime' $newBurst
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 192:
+        setField $procToRun_ 'numAgingSkips' 1
+                 ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 198:
+    getField $procToRun_ 'priority' basePrio
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 199:
+    setField $procToRun_ 'agedPriority' $basePrio
+             ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 216:
+    hwTime=$(($hwCSCount_*$HW_CS_TIME))
+              ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                          ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 217:
+    lwTime=$(($lwCSCount_*$LW_CS_TIME))
+              ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                          ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 237:
+    local oldProcAged=0 # getField
+          ^-- SC2034: oldProcAged appears unused. Verify it or export it.
+
+
+In asg4.sh line 245:
+        setField $currProc 'numAgingSkips' $(( $currProcSkips + 1 ))
+                                               ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 253:
+            procAge=$(($procAge+1))
+                       ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 297:
+    eval $ret_="$min"
+         ^-- SC2086: Double quote to prevent globbing and word splitting.
+
+
+In asg4.sh line 329:
+        timeSpentIdle=$(($timeSpentIdle-$currentTime+$idleT))
+                         ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                        ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                                     ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 330:
+        printf "%5s..%5s: ********** IDLE **********, Total time remaining (all threads): $totalRemTime.\n" "$currentTime" "$(($idleT-1))"
+                                                                                                                               ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 342:
+        newTime=$(($currentTime+$HW_CS_TIME))
+                   ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 343:
+        printf "start[%5s], end[%5s], status: HW context switch\n" "$currentTime" "$(($newTime-1))"
+                                                                                      ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 345:
+        hwCSCount=$(($hwCSCount+1))
+                     ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 351:
+            newTime=$(($currentTime+$HW_CS_TIME))
+                       ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                    ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 352:
+            printf "start[%5s], end[%5s], status: HW context switch\n" "$currentTime" "$(($newTime-1))"
+                                                                                          ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 354:
+            hwCSCount=$(($hwCSCount+1))
+                         ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 356:
+            newTime=$(($currentTime+$LW_CS_TIME))
+                       ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                                    ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 357:
+            printf "start[%5s], end[%5s], status: LW context switch\n" "$currentTime" "$(($newTime-1))"
+                                                                                          ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 359:
+            lwCSCount=$(($lwCSCount+1))
+                         ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 372:
+    newTime=$(($currentTime+$runTime))
+               ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                            ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 375:
+    newRemTime=$(($remTime-$runTime))
+                  ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+                           ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+
+
+In asg4.sh line 378:
+    printf "start[%5s], end[%5s], pid[%2s], tid[%3s], priority[%2s], runtime[%3s], availTime[%5s], remaining time[%4s], burst length [%3s].  Status: " "$currentTime" "$(($newTime-1))" "$curPID" "$curTID" "$curPrio" "$runTime" "$curAvail" "$remTime" "$remBurst"
+                                                                                                                                                                          ^-- SC2004: $/${} is unnecessary on arithmetic variables.
+

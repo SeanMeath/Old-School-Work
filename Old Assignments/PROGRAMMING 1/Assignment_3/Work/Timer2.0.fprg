@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-06 04:07:46 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTA2OyAwMjo0NDo1OCBQTTsgMjI3OQ=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTA2OyAwNDowNzo0NiBQTTsgMjI3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Milaseconds" type="Integer" array="False" size="" variables="Milaseconds"/>
+            <declare name="Seconds" type="Integer" array="False" size="" variables="Seconds"/>
+            <declare name="Minutes" type="Integer" array="False" size="" variables="Minutes"/>
+            <declare name="Hours" type="Integer" array="False" size="" variables="Hours"/>
+            <for variable="Hours" start="0" end="23" direction="inc" step="1">
+                <for variable="Minutes" start="0" end="59" direction="inc" step="1">
+                    <for variable="Seconds" start="0" end="59" direction="inc" step="1">
+                        <for variable="MilaSeconds" start="0" end="99" direction="inc" step="1">
+                            <output expression="Hours &amp; &quot;:&quot; &amp; Minutes &amp; &quot;:&quot; &amp; Seconds"/>
+                        </for>
+                    </for>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

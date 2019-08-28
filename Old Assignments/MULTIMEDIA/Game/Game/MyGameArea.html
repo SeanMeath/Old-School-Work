@@ -1,0 +1,335 @@
+
+<!doctype = html>
+<html>
+    <head>
+        <style>
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        </style>
+        <canvas id = "Area" width = "1000" height = "870"></canvas>
+        <br><br><br>
+        <div id= "myDiv">
+            <img id = "Character" src = "Characters/Boo.gif">
+            <p id = "Health"></p>
+            <p id = "FriendCounter"></p>
+            <p id = "LifeCounter"></p>
+            <img id = "FriendPic" src = "">
+        </div>
+        <audio id="song">
+            <source src="Music.mp3" type="audio/mpeg">
+        </audio>
+    </head>
+    <body>
+        <script>
+            var myArea = document.getElementById("Area");
+            var Spacing = myArea.clientWidth;
+            document.getElementById("myDiv").style.width = myArea.width;
+            var context = myArea.getContext("2d");
+            context.font="20px Georgia";
+            var myFriends = ["Dad", "Doge", "Father", "Fire", "Flower", "Hero", "Mom", "Skele", "Spiter", "Swipper"];
+            var myActions = ["Smile", "Hug", "Cry", "...", "Run", "Bribe", "Talk", "Kiss", "Lick", "Fortite Dance", "Be Cute", "Eye Contact", "Go Out?", "Complement", "Hit", "Touch"];
+            var myChosenActions = new Array();
+            var myThingsToDraw = [new Character(), new Friend()];
+            var myBoxesToDraw = new Array();
+            var choice;
+            var up, down, left, right;
+            var met = false;
+            var fNum = 1;
+            var Life = 3;
+            var msc = false;
+            var backgroundSong = document.getElementById("song");
+            document.getElementById("FriendCounter").innerText = "Friends: " + (fNum-1);
+            document.getElementById("LifeCounter").innerText = "Life: " + Life;
+            chooseActions();
+            Animate();
+
+            function Friend(){
+                this.Size = 150;
+                this.Xpos = generateNumber(0+this.Size, myArea.clientWidth-this.Size);
+                this.Ypos = generateNumber(300, myArea.clientHeight-this.Size);
+                this.Speed = 5;
+                this.image = new Image();
+                var pos = Math.ceil(generateNumber(0, myFriends.length - 1));
+                var char = myFriends[pos];
+                myFriends.splice(pos, 1);
+                this.image.src = "Characters/" + char + ".gif";
+            }
+
+            function Character(){
+                this.Size = 150;
+                this.Xpos = 0;
+                this.Ypos = 0;
+                this.Speed = 7.5;
+                this.image = new Image();
+                this.image.src = "Characters/Boo.gif"
+            }
+            
+            function Action(c, chance){
+                this.Xpos = 100 + c*210;
+                this.Ypos = 100;
+                this.W = 160;
+                this.H = 120;
+                this.Chance = chance;
+                this.Text = myChosenActions[c];
+            }
+
+            document.addEventListener("keydown", function(c){
+                if(!msc){
+                    backgroundSong.play();
+                }
+                var key = c.keyCode;
+                switch(key){
+                    case 38:{
+                        up = true;
+                        break;
+                    }
+                    case 87:{
+                        up = true;
+                        break;
+                    }
+                    case 39:{
+                        right = true;
+                        break;
+                    }
+                    case 68:{
+                        right = true;
+                        break;
+                    }
+                    case 40:{
+                        down = true;
+                        break;
+                    }
+                    case 83:{
+                        down = true;
+                        break;
+                    }
+                    case 37:{
+                        left = true;
+                        break;
+                    }
+                    case 65:{
+                        left = true;
+                        break;
+                    }
+                }
+            });
+
+            document.addEventListener("keyup", function(c){
+                var key = c.keyCode;
+                switch(key){
+                    case 38:{
+                        up = false;
+                        break;
+                    }
+                    case 87:{
+                        up = false;
+                        break;
+                    }
+                    case 39:{
+                        right = false;
+                        break;
+                    }
+                    case 68:{
+                        right = false;
+                        break;
+                    }
+                    case 40:{
+                        down = false;
+                        break;
+                    }
+                    case 83:{
+                        down = false;
+                        break;
+                    }
+                    case 37:{
+                        left = false;
+                        break;
+                    }
+                    case 65:{
+                        left = false;
+                        break;
+                    }
+                }
+            });
+
+            document.addEventListener("click", function(c){
+                checkButtons(c);
+                if(choice != null)
+                {
+                    var f = checkFriendship(choice);
+                    if(f && myFriends.length > 0){
+                        fNum++;
+                        myThingsToDraw.push(new Friend());
+                        myBoxesToDraw = new Array();
+                        met = false;
+                        chooseActions();
+                        document.getElementById("FriendCounter").innerText = "Friends: " + (fNum-1);
+                    }
+                    else if(Life>1){
+                        Life--;
+                        myThingsToDraw.splice(fNum, 1, new Friend());
+                        met = false;
+                        chooseActions();
+                        document.getElementById("LifeCounter").innerText = "Life: " + Life;
+                    }
+                    else if(myFriends.length == 0){
+                        alert("No more friends to be made :(  But you made: " + (fNum-1) + " Friends!");
+                        window.location.href = "MyGameMenu.html";
+                    }
+                    else{
+                        alert("You're Heart is Broken :(  You only made: " + (fNum-1) + " Friends");
+                        window.location.href = "MyGameMenu.html";
+                    }
+                }
+            });
+
+            function Move(){
+                if(up && right){
+                    myThingsToDraw[0].Xpos += (myThingsToDraw[0].Speed/2);
+                    myThingsToDraw[0].Ypos -= (myThingsToDraw[0].Speed/2);
+                }
+                else if(right && down){
+                    myThingsToDraw[0].Xpos += (myThingsToDraw[0].Speed/2);
+                    myThingsToDraw[0].Ypos += (myThingsToDraw[0].Speed/2);
+                }
+                else if(down && left){
+                    myThingsToDraw[0].Xpos -= (myThingsToDraw[0].Speed/2);
+                    myThingsToDraw[0].Ypos += (myThingsToDraw[0].Speed/2);
+                }
+                else if(left && up){
+                    myThingsToDraw[0].Xpos -= (myThingsToDraw[0].Speed/2);
+                    myThingsToDraw[0].Ypos -= (myThingsToDraw[0].Speed/2);
+                }
+                else{
+                    if(up){
+                        myThingsToDraw[0].Ypos -= myThingsToDraw[0].Speed;
+                    }
+                    if(right){
+                        myThingsToDraw[0].Xpos += myThingsToDraw[0].Speed;
+                    }
+                    if(down){
+                        myThingsToDraw[0].Ypos += myThingsToDraw[0].Speed;
+                    }
+                    if(left){
+                        myThingsToDraw[0].Xpos -= myThingsToDraw[0].Speed;
+                    }
+                }
+                if(myThingsToDraw[0].Xpos+myThingsToDraw[0].Size>myArea.clientWidth){
+                    myThingsToDraw[0].Xpos = (myArea.clientWidth-myThingsToDraw[0].Size);
+                }
+                if(myThingsToDraw[0].Ypos+myThingsToDraw[0].Size>myArea.clientHeight){
+                    myThingsToDraw[0].Ypos = (myArea.clientHeight-myThingsToDraw[0].Size);
+                }
+                if(myThingsToDraw[0].Xpos<0){
+                    myThingsToDraw[0].Xpos = 0;
+                }
+                if(myThingsToDraw[0].Ypos<0){
+                    myThingsToDraw[0].Ypos = 0;
+                }
+            }
+
+            function Colision(){
+                if(myThingsToDraw[0].Xpos + myThingsToDraw[0].Size >= myThingsToDraw[fNum].Xpos && myThingsToDraw[0].Xpos <= myThingsToDraw[fNum].Xpos + myThingsToDraw[fNum].Size && myThingsToDraw[0].Ypos + myThingsToDraw[0].Size >= myThingsToDraw[fNum].Ypos && myThingsToDraw[0].Ypos <= myThingsToDraw[fNum].Ypos + myThingsToDraw[fNum].Size)
+                    return true;
+                return false;
+            }
+
+            function Animate(){
+                requestAnimationFrame(Animate, 1);
+                Move();
+                context.clearRect(0, 0, myArea.clientWidth, myArea.clientHeight);
+                context.fillStyle = "black";
+                context.fillRect(0, 0, myArea.clientWidth, myArea.clientHeight);
+                if(Colision() && !met){
+                    Friendship();
+                }
+                Draw();
+            }
+
+            function Friendship(){
+                document.getElementById("FriendPic").src = myThingsToDraw[fNum].image.src;
+                newBox = new Action(0, 100);
+                myBoxesToDraw.push(newBox);
+                newBox = new Action(1, 50);
+                myBoxesToDraw.push(newBox);
+                newBox = new Action(2, 25);
+                myBoxesToDraw.push(newBox);
+                newBox = new Action(3, 0);
+                myBoxesToDraw.push(newBox);
+                myBoxesToDraw = myBoxesToDraw.shuffle();
+                met = true;
+            }
+
+            function Draw(){
+                if(met){
+                    myBoxesToDraw.forEach(function(c){
+                        context.fillStyle = "white";
+                        context.fillRect(c.Xpos, c.Ypos, c.W, c.H);
+                        context.fillStyle = "black";
+                        context.fillText(c.Text,c.Xpos + 15,c.Ypos + 60);
+                    });
+                }
+                myThingsToDraw.forEach(function(c){
+                    context.drawImage(c.image, c.Xpos, c.Ypos);
+                });
+            }
+
+            function checkButtons(clicker){
+                var set = false;
+                myBoxesToDraw.forEach(function(c){
+                    if(clicker.offsetX <= c.Xpos + c.W && clicker.offsetX >= c.Xpos){
+                        if(clicker.offsetY <= c.Ypos + c.H && clicker.offsetY >= c.Ypos){
+                            choice = c;
+                            set = true;
+                        }
+                    }
+                })
+                if(!set){
+                    choice = null;
+                }
+            }
+
+            function checkFriendship(c){
+                var ran = generateNumber(0, 100);
+                if(ran > c.Chance){
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+
+            Array.prototype.shuffle = function(){
+                var input = this;
+                for (var i = input.length-1; i >=0; i--) {
+                    var randomIndex = Math.floor(Math.random()*(i+1));
+                    var itemAtIndex = input[randomIndex].Chance;
+                    input[randomIndex].Chance = input[i].Chance;
+                    input[i].Chance = itemAtIndex;
+                }
+                return input;
+            }
+
+            function generateNumber(min , max){
+                return Math.random() * (max-min) + min;
+            }
+
+            function chooseActions(){
+                myChosenActions = new Array();
+                var removedActions = new Array();
+                for(i = 0; i < 4; i++){
+                    var chosen = Math.round(generateNumber(0, 15));
+                    myChosenActions.push(myActions[chosen]);
+                    removedActions.push(myActions.splice(chosen, 1));
+                }
+                for(i = 0; i < 4; i++){
+                    myActions.push(removedActions[i][0]);
+                }
+                console.log(myActions);
+            }
+        </script>
+    </body>
+</html>

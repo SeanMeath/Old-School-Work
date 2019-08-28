@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-29 03:13:31 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTA5LTI5OyAwMzowNzo1MiBQTTsgMjI4Ng=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTA5LTI5OyAwMzoxMzozMSBQTTsgMjI4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Big" type="Real" array="False" size="" variables="Big"/>
+            <declare name="Numb" type="Real" array="False" size="" variables="Numb"/>
+            <declare name="A" type="Integer" array="False" size="" variables="A"/>
+            <output expression="&quot;Input Numb&quot;"/>
+            <input variable="Numb"/>
+            <assign variable="Big" expression="Numb"/>
+            <for variable="A" start="4" end="1" direction="dec" step="1">
+                <output expression="&quot;Input another Numb&quot;"/>
+                <input variable="Numb"/>
+                <if expression="Numb&gt;Big">
+                    <then>
+                        <assign variable="Big" expression="Numb"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="Big"/>
+        </body>
+    </function>
+</flowgorithm>

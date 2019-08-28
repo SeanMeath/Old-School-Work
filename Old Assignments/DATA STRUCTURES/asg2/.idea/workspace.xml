@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="968b6e43-67f0-449f-8f68-bf41ae423b3f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/SortedSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/SortedSet.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/SortedSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1028">
+              <caret line="215" column="1" lean-forward="true" selection-start-line="215" selection-start-column="1" selection-end-line="215" selection-end-column="1" />
+              <folding>
+                <element signature="method#SortedSet#1;class#SortedSet#0" />
+                <element signature="method#contains#0;class#SortedSet#0" />
+                <element signature="method#containsAll#0;class#SortedSet#0" />
+                <element signature="method#add#0;class#SortedSet#0" />
+                <element signature="method#remove#0;class#SortedSet#0" />
+                <element signature="method#min#0;class#SortedSet#0" />
+                <element signature="method#max#0;class#SortedSet#0" />
+                <element signature="method#subset#0;class#SortedSet#0" />
+                <element signature="method#toString#0;class#SortedSet#0" />
+                <element signature="method#reset#0;class#SortedSet#0" />
+                <element signature="method#next#0;class#SortedSet#0" />
+                <element signature="method#hasNext#0;class#SortedSet#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ca/qc/johnabbott/cs406/SortedSetTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+              <folding>
+                <element signature="method#setUp#0;class#SortedSetTest#0" />
+                <element signature="method#testContains#0;class#SortedSetTest#0" />
+                <element signature="method#testConstructorMakesEmptySet#0;class#SortedSetTest#0" />
+                <element signature="method#testAddFirst#0;class#SortedSetTest#0" />
+                <element signature="method#testAddLast#0;class#SortedSetTest#0" />
+                <element signature="method#testAddMiddle#0;class#SortedSetTest#0" />
+                <element signature="method#testNoDuplicates#0;class#SortedSetTest#0" />
+                <element signature="method#testFullSet#0;class#SortedSetTest#0" />
+                <element signature="method#testFullSetException#0;class#SortedSetTest#0" />
+                <element signature="method#testRemoveFirst#0;class#SortedSetTest#0" />
+                <element signature="method#testRemoveLast#0;class#SortedSetTest#0" />
+                <element signature="method#testRemoveMiddle#0;class#SortedSetTest#0" />
+                <element signature="method#testRemoveNotInSet#0;class#SortedSetTest#0" />
+                <element signature="method#testEmptySet#0;class#SortedSetTest#0" />
+                <element signature="method#testRemoveOnEmptySet#0;class#SortedSetTest#0" />
+                <element signature="method#testRemoveOnEmptySetNoThrow#0;class#SortedSetTest#0" />
+                <element signature="method#testMin#0;class#SortedSetTest#0" />
+                <element signature="method#testMax#0;class#SortedSetTest#0" />
+                <element signature="method#testNewMin#0;class#SortedSetTest#0" />
+                <element signature="method#testNewMax#0;class#SortedSetTest#0" />
+                <element signature="method#testMinMaxInSingletonSet#0;class#SortedSetTest#0" />
+                <element signature="method#testMinOnEmptySet#0;class#SortedSetTest#0" />
+                <element signature="method#testMaxOnEmptySet#0;class#SortedSetTest#0" />
+                <element signature="method#testTraversal#0;class#SortedSetTest#0" />
+                <element signature="method#testTraversalWithoutError#0;class#SortedSetTest#0" />
+                <element signature="method#testTraversalEmptySet#0;class#SortedSetTest#0" />
+                <element signature="method#testAddDuringTraversal#0;class#SortedSetTest#0" />
+                <element signature="method#testCallNextOnCompletedTraversal#0;class#SortedSetTest#0" />
+                <element signature="method#testContainsAll#0;class#SortedSetTest#0" />
+                <element signature="method#testToString#0;class#SortedSetTest#0" />
+                <element signature="method#testSubsetOnEmptySet#0;class#SortedSetTest#0" />
+                <element signature="method#testSubset#0;class#SortedSetTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test/ca/qc/johnabbott/cs406/SortedSetTest.java" />
+        <option value="$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/SortedSet.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-26" />
+    <option name="y" value="-19" />
+    <option name="width" value="2560" />
+    <option name="height" value="1337" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="asg2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs406" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cs406" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg2" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asg2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asg2" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="cs406" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551153673469" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.SortedSetTest">
+    <configuration name="SortedSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="asg2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.qc.johnabbott.cs406.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ca.qc.johnabbott.cs406" />
+      <option name="MAIN_CLASS_NAME" value="ca.qc.johnabbott.cs406.SortedSetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortedSetTest.testRemoveMiddle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="asg2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.qc.johnabbott.cs406.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ca.qc.johnabbott.cs406" />
+      <option name="MAIN_CLASS_NAME" value="ca.qc.johnabbott.cs406.SortedSetTest" />
+      <option name="METHOD_NAME" value="testRemoveMiddle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.SortedSetTest" />
+      <item itemvalue="JUnit.SortedSetTest.testRemoveMiddle" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SortedSetTest" />
+        <item itemvalue="JUnit.SortedSetTest.testRemoveMiddle" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="968b6e43-67f0-449f-8f68-bf41ae423b3f" name="Default Changelist" comment="" />
+      <created>1550520917018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550520917018</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 33m 47s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 33m 49s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 33m 50s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 33m 53s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 33m 54s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 33m 56s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 33m 57s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 58m 41s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 58m 44s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortedSetTest - 2019.02.25 at 22h 58m 53s.xml">
+      <configuration name="SortedSetTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14069952" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.023866348" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2948718" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3293556" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32852563" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.32999372" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/asg2.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Asg2.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/TraversalException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/FullSetException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/EmptySetException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/Traversable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Integer.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ca/qc/johnabbott/cs406/Range.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ca/qc/johnabbott/cs406/SortedSetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+          <folding>
+            <element signature="method#setUp#0;class#SortedSetTest#0" />
+            <element signature="method#testContains#0;class#SortedSetTest#0" />
+            <element signature="method#testConstructorMakesEmptySet#0;class#SortedSetTest#0" />
+            <element signature="method#testAddFirst#0;class#SortedSetTest#0" />
+            <element signature="method#testAddLast#0;class#SortedSetTest#0" />
+            <element signature="method#testAddMiddle#0;class#SortedSetTest#0" />
+            <element signature="method#testNoDuplicates#0;class#SortedSetTest#0" />
+            <element signature="method#testFullSet#0;class#SortedSetTest#0" />
+            <element signature="method#testFullSetException#0;class#SortedSetTest#0" />
+            <element signature="method#testRemoveFirst#0;class#SortedSetTest#0" />
+            <element signature="method#testRemoveLast#0;class#SortedSetTest#0" />
+            <element signature="method#testRemoveMiddle#0;class#SortedSetTest#0" />
+            <element signature="method#testRemoveNotInSet#0;class#SortedSetTest#0" />
+            <element signature="method#testEmptySet#0;class#SortedSetTest#0" />
+            <element signature="method#testRemoveOnEmptySet#0;class#SortedSetTest#0" />
+            <element signature="method#testRemoveOnEmptySetNoThrow#0;class#SortedSetTest#0" />
+            <element signature="method#testMin#0;class#SortedSetTest#0" />
+            <element signature="method#testMax#0;class#SortedSetTest#0" />
+            <element signature="method#testNewMin#0;class#SortedSetTest#0" />
+            <element signature="method#testNewMax#0;class#SortedSetTest#0" />
+            <element signature="method#testMinMaxInSingletonSet#0;class#SortedSetTest#0" />
+            <element signature="method#testMinOnEmptySet#0;class#SortedSetTest#0" />
+            <element signature="method#testMaxOnEmptySet#0;class#SortedSetTest#0" />
+            <element signature="method#testTraversal#0;class#SortedSetTest#0" />
+            <element signature="method#testTraversalWithoutError#0;class#SortedSetTest#0" />
+            <element signature="method#testTraversalEmptySet#0;class#SortedSetTest#0" />
+            <element signature="method#testAddDuringTraversal#0;class#SortedSetTest#0" />
+            <element signature="method#testCallNextOnCompletedTraversal#0;class#SortedSetTest#0" />
+            <element signature="method#testContainsAll#0;class#SortedSetTest#0" />
+            <element signature="method#testToString#0;class#SortedSetTest#0" />
+            <element signature="method#testSubsetOnEmptySet#0;class#SortedSetTest#0" />
+            <element signature="method#testSubset#0;class#SortedSetTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/johnabbott/cs406/collections/SortedSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1028">
+          <caret line="215" column="1" lean-forward="true" selection-start-line="215" selection-start-column="1" selection-end-line="215" selection-end-column="1" />
+          <folding>
+            <element signature="method#SortedSet#1;class#SortedSet#0" />
+            <element signature="method#contains#0;class#SortedSet#0" />
+            <element signature="method#containsAll#0;class#SortedSet#0" />
+            <element signature="method#add#0;class#SortedSet#0" />
+            <element signature="method#remove#0;class#SortedSet#0" />
+            <element signature="method#min#0;class#SortedSet#0" />
+            <element signature="method#max#0;class#SortedSet#0" />
+            <element signature="method#subset#0;class#SortedSet#0" />
+            <element signature="method#toString#0;class#SortedSet#0" />
+            <element signature="method#reset#0;class#SortedSet#0" />
+            <element signature="method#next#0;class#SortedSet#0" />
+            <element signature="method#hasNext#0;class#SortedSet#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>asg2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

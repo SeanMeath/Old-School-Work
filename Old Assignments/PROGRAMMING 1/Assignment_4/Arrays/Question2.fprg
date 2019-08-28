@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-27 03:03:30 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTIwOyAwMjo1MjowNyBQTTsgMjI2OA=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMzFXOyAyMDE3LTEwLTI3OyAwMzowMzozMCBQTTsgMjI2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ARRAYSIZE" type="Integer" array="False" size="" variables="ARRAYSIZE"/>
+            <assign variable="ARRAYSIZE" expression="18"/>
+            <declare name="Codes" type="Integer" array="True" size="ARRAYSIZE" variables="Codes[ARRAYSIZE]"/>
+            <declare name="Numb" type="Integer" array="False" size="" variables="Numb"/>
+            <comment text="Declaring and assigning the codes as well as populating the array"/>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <declare name="Code1" type="Integer" array="False" size="" variables="Code1"/>
+            <assign variable="Code1" expression="5658845"/>
+            <assign variable="Codes[Counter]" expression="Code1"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code2" type="Integer" array="False" size="" variables="Code2"/>
+            <assign variable="Code2" expression="4520125"/>
+            <assign variable="Codes[Counter]" expression="Code2"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code3" type="Integer" array="False" size="" variables="Code3"/>
+            <assign variable="Code3" expression="7895122"/>
+            <assign variable="Codes[Counter]" expression="Code3"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code4" type="Integer" array="False" size="" variables="Code4"/>
+            <assign variable="Code4" expression="8777541"/>
+            <assign variable="Codes[Counter]" expression="Code4"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code5" type="Integer" array="False" size="" variables="Code5"/>
+            <assign variable="Code5" expression="8451277"/>
+            <assign variable="Codes[Counter]" expression="Code5"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code6" type="Integer" array="False" size="" variables="Code6"/>
+            <assign variable="Code6" expression="1302850"/>
+            <assign variable="Codes[Counter]" expression="Code6"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code7" type="Integer" array="False" size="" variables="Code7"/>
+            <assign variable="Code7" expression="8080152"/>
+            <assign variable="Codes[Counter]" expression="Code7"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code8" type="Integer" array="False" size="" variables="Code8"/>
+            <assign variable="Code8" expression="4562555"/>
+            <assign variable="Codes[Counter]" expression="Code8"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code9" type="Integer" array="False" size="" variables="Code9"/>
+            <assign variable="Code9" expression="5552012"/>
+            <assign variable="Codes[Counter]" expression="Code9"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code10" type="Integer" array="False" size="" variables="Code10"/>
+            <assign variable="Code10" expression="5050552"/>
+            <assign variable="Codes[Counter]" expression="Code10"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code11" type="Integer" array="False" size="" variables="Code11"/>
+            <assign variable="Code11" expression="7825877"/>
+            <assign variable="Codes[Counter]" expression="Code11"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code12" type="Integer" array="False" size="" variables="Code12"/>
+            <assign variable="Code12" expression="1250255"/>
+            <assign variable="Codes[Counter]" expression="Code12"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code13" type="Integer" array="False" size="" variables="Code13"/>
+            <assign variable="Code13" expression="1005231"/>
+            <assign variable="Codes[Counter]" expression="Code13"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code14" type="Integer" array="False" size="" variables="Code14"/>
+            <assign variable="Code14" expression="6545231"/>
+            <assign variable="Codes[Counter]" expression="Code14"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code15" type="Integer" array="False" size="" variables="Code15"/>
+            <assign variable="Code15" expression="3852085"/>
+            <assign variable="Codes[Counter]" expression="Code15"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code16" type="Integer" array="False" size="" variables="Code16"/>
+            <assign variable="Code16" expression="7576651"/>
+            <assign variable="Codes[Counter]" expression="Code16"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code17" type="Integer" array="False" size="" variables="Code17"/>
+            <assign variable="Code17" expression="7881200"/>
+            <assign variable="Codes[Counter]" expression="Code17"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <declare name="Code18" type="Integer" array="False" size="" variables="Code18"/>
+            <assign variable="Code18" expression="4581002"/>
+            <assign variable="Codes[Counter]" expression="Code18"/>
+            <comment text="End of the assigning and populating"/>
+            <output expression="&quot;Please enter your charge number.&quot;"/>
+            <input variable="Numb"/>
+            <declare name="Answer" type="Boolean" array="False" size="" variables="Answer"/>
+            <assign variable="Answer" expression="GetResponse(Codes,ARRAYSIZE,Numb)"/>
+            <if expression="Answer==True">
+                <then>
+                    <output expression="&quot;The charge number entered is valid.&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;The charge number entered is not valid.&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="GetResponse" type="Boolean" variable="Response">
+        <parameters>
+            <parameter name="D1" type="Integer" array="True"/>
+            <parameter name="D2" type="Integer" array="False"/>
+            <parameter name="D3" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Response" type="Boolean" array="False" size="" variables="Response"/>
+            <assign variable="Response" expression="False"/>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <while expression="Counter&lt;D2">
+                <if expression="D3==D1[Counter]">
+                    <then>
+                        <assign variable="Response" expression="True"/>
+                        <assign variable="Counter" expression="D2"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

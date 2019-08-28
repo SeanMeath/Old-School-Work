@@ -1,0 +1,10 @@
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\bin\Debug\meatSeSift.exe.config
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\bin\Debug\meatSeSift.exe
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\bin\Debug\meatSeSift.pdb
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\obj\Debug\MeatSeSift.csprojAssemblyReference.cache
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\obj\Debug\meatSeSift.Form1.resources
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\obj\Debug\meatSeSift.Properties.Resources.resources
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\obj\Debug\MeatSeSift.csproj.GenerateResource.cache
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\obj\Debug\MeatSeSift.csproj.CoreCompileInputs.cache
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\obj\Debug\meatSeSift.exe
+C:\Users\Sean Meath\Desktop\twest\MeatSeSift\obj\Debug\meatSeSift.pdb

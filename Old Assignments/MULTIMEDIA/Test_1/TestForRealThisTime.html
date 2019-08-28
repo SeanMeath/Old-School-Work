@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+	<body>
+		<script>
+			var a = [];
+			var num = 14;
+			var nNum = num;
+			a.push(num);
+			for(var i = 0; i < 11; i++)
+			{
+				nNum = nNum * 3;
+				a.push(nNum);
+			}
+			
+			a.forEach(function(x)
+			{
+				if(x%9==0)
+				{
+					console.log(x + ' TRUE (is divisible by 9)')
+				}
+				else
+				{
+					console.log(x + ' FALSE (is NOT divisible by 9)')
+				}
+			})
+		</script>
+	</body>
+</html>

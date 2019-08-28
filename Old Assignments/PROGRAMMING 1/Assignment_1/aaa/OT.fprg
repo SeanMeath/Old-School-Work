@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1757898"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-09-22 10:15:24 PM"/>
+        <attribute name="created" value="MTc1Nzg5ODsgUEUzMjYtMTU7IDIwMTctMDktMTU7IDExOjQxOjQ1IEFNOyAyMTk4"/>
+        <attribute name="edited" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE3LTA5LTIyOyAxMDoxNToyNCBQTTsgMzM0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="HW" type="Integer" array="False" size=""/>
+            <declare name="PR" type="Real" array="False" size=""/>
+            <declare name="P1" type="Real" array="False" size=""/>
+            <declare name="P2" type="Real" array="False" size=""/>
+            <declare name="P3" type="Real" array="False" size=""/>
+            <declare name="TP" type="Real" array="False" size=""/>
+            <declare name="OT1" type="Real" array="False" size=""/>
+            <declare name="OTH1" type="Real" array="False" size=""/>
+            <assign variable="OTH1" expression="40"/>
+            <declare name="OTH2" type="Integer" array="False" size=""/>
+            <assign variable="OTH2" expression="60"/>
+            <assign variable="OT1" expression="1.5"/>
+            <declare name="OT2" type="Real" array="False" size=""/>
+            <assign variable="OT2" expression="2"/>
+            <output expression="&quot;input hours worked&quot;"/>
+            <input variable="HW"/>
+            <output expression="&quot;input payrate&quot;"/>
+            <input variable="PR"/>
+            <if expression="HW &gt;= OTH1">
+                <then>
+                    <if expression="HW &gt;= OTH2">
+                        <then>
+                            <assign variable="P1" expression="OTH1 * PR"/>
+                            <assign variable="P2" expression="(OTH2 - OTH1) * PR * OT1"/>
+                            <assign variable="P3" expression="(HW - OTH2) * PR * OT2"/>
+                        </then>
+                        <else>
+                            <assign variable="P1" expression="OTH1 * PR"/>
+                            <assign variable="P2" expression="(HW - OTH1) * PR * OT1"/>
+                            <assign variable="P3" expression="0"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="P1" expression="HW * PR"/>
+                    <assign variable="P2" expression="0"/>
+                    <assign variable="P3" expression="0"/>
+                </else>
+            </if>
+            <assign variable="TP" expression="P1 + P2 + P3"/>
+            <output expression="&quot;Regular pay is $&quot; &amp; P1"/>
+            <output expression="&quot;Overtime pay is $&quot; &amp; P2"/>
+            <output expression="&quot;Double overtime pay is $&quot; &amp; P3"/>
+            <output expression="&quot;Total pay is $&quot; &amp; TP"/>
+        </body>
+    </function>
+</flowgorithm>

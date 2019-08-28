@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<body>
+
+    <img src="" id="pic">
+    <button id="b">Try Me</button>
+    <button id="b2">Colour Me</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+
+        var btn = document.getElementById("b");
+        var btn2 = document.getElementById("b2");
+        var Happysrc="Happy.png";
+        var Sadsrc="Sad.png"
+        var pic = document.getElementById("pic");
+        pic.src=Happysrc;
+        var passed = false;
+
+        b.addEventListener("click", function(){
+            if(passed){
+                pic.src = Happysrc;
+                passed = false;
+            }
+            else{
+                pic.src = Sadsrc;
+                passed = true;
+            }
+            //b.style.backgroundColor = "yellow";
+            colorMe(b, "yellow");
+        });
+
+        b2.addEventListener("click", function(){
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+            console.log(x + "   " + y + "   " + z); //Random Works
+            //b.style.backgroundColor = "rgb("+x+","+y+","+z+")";
+            colorMe(b, "rgb("+x+","+y+","+z+")");
+        });
+
+        var colorMe = function(thing, color){
+            thing.style.backgroundColor = color;
+        };
+
+	</script>
+</body>
+</html>

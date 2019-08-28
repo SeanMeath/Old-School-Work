@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-27 02:49:33 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjUtMTE7IDIwMTctMTAtMjc7IDAxOjQ5OjIyIFBNOyAyMTkx"/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMzFXOyAyMDE3LTEwLTI3OyAwMjo0OTozMyBQTTsgMjI4MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Answer1" type="String" array="False" size="" variables="Answer1"/>
+            <assign variable="Answer1" expression="&quot;A&quot;"/>
+            <declare name="Answer2" type="String" array="False" size="" variables="Answer2"/>
+            <assign variable="Answer2" expression="&quot;B&quot;"/>
+            <declare name="Answer3" type="String" array="False" size="" variables="Answer3"/>
+            <assign variable="Answer3" expression="&quot;C&quot;"/>
+            <declare name="Answer4" type="String" array="False" size="" variables="Answer4"/>
+            <assign variable="Answer4" expression="&quot;D&quot;"/>
+            <comment text=""/>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <declare name="ARRAYSIZE" type="Integer" array="False" size="" variables="ARRAYSIZE"/>
+            <assign variable="ARRAYSIZE" expression="10"/>
+            <declare name="Questions" type="String" array="True" size="ARRAYSIZE" variables="Questions[ARRAYSIZE]"/>
+            <assign variable="Questions[Counter]" expression="Answer2"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer4"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer1"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer1"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer3"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer1"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer2"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer1"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer3"/>
+            <assign variable="Counter" expression="Counter+1"/>
+            <assign variable="Questions[Counter]" expression="Answer4"/>
+            <comment text=""/>
+            <assign variable="Counter" expression="0"/>
+            <declare name="Answers" type="String" array="True" size="ARRAYSIZE" variables="Answers[ARRAYSIZE]"/>
+            <while expression="Counter&lt;ARRAYSIZE">
+                <output expression="&quot;Please answer youre response to question #&quot; &amp; Counter+1 &amp; &quot;.&quot;"/>
+                <input variable="Answers[Counter]"/>
+                <while expression="Answers[Counter]!=&quot;A&quot;&amp;&amp;Answers[Counter]!=&quot;B&quot;&amp;&amp;Answers[Counter]!=&quot;C&quot;&amp;&amp;Answers[Counter]!=&quot;D&quot;">
+                    <output expression="&quot;Answer entered is not valid (A, B, C, D). Please try again.&quot;"/>
+                    <input variable="Answers[Counter]"/>
+                </while>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+            <comment text=""/>
+            <call expression="Validation(Questions,Answers,ARRAYSIZE)"/>
+        </body>
+    </function>
+    <function name="Validation" type="None" variable="">
+        <parameters>
+            <parameter name="D1" type="String" array="True"/>
+            <parameter name="D2" type="String" array="True"/>
+            <parameter name="D3" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <declare name="Correct" type="Integer" array="False" size="" variables="Correct"/>
+            <assign variable="Correct" expression="0"/>
+            <declare name="Wrong" type="Integer" array="False" size="" variables="Wrong"/>
+            <assign variable="Wrong" expression="0"/>
+            <declare name="Pass" type="Integer" array="False" size="" variables="Pass"/>
+            <assign variable="Pass" expression="6"/>
+            <declare name="Curent" type="String" array="False" size="" variables="Curent"/>
+            <output expression="&quot;Question  | Answer  | User Input  | Result&quot;"/>
+            <while expression="Counter&lt;D3">
+                <if expression="D1[Counter] == D2[Counter]">
+                    <then>
+                        <assign variable="Correct" expression="Correct+1"/>
+                        <assign variable="Curent" expression="&quot;Correct&quot;"/>
+                    </then>
+                    <else>
+                        <assign variable="Wrong" expression="Wrong+1"/>
+                        <assign variable="Curent" expression="&quot;Incorrect&quot;"/>
+                    </else>
+                </if>
+                <output expression="Counter+1 &amp; &quot;  | &quot; &amp; D1[Counter] &amp; &quot;  | &quot; &amp; D2[Counter] &amp; &quot;  | &quot; &amp; Curent"/>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+            <output expression="&quot;You succesfully answered &quot; &amp; Correct &amp; &quot; questions.&quot;"/>
+            <output expression="&quot;You failled &quot; &amp; Wrong &amp; &quot; questions.&quot;"/>
+            <if expression="Correct&gt;=Pass">
+                <then>
+                    <output expression="&quot;Congradulations you passed the test!&quot;"/>
+                </then>
+                <else>
+                    <output expression="&quot;Congradulations you failled the test!&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

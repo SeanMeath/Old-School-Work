@@ -1,0 +1,123 @@
+﻿<Window x:Class="Exercise.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise"
+        mc:Ignorable="d"
+        Title="Acme Industries" d:DesignWidth="518.667" Width="600" >
+
+    <StackPanel Margin="20">
+
+        <!--#region title -->
+        <!-- ==========================================================================
+             Title
+        ============================================================================== -->
+        <TextBlock FontSize="30" TextAlignment="Center">Sandy's Health'O'Meter</TextBlock>
+        <TextBlock FontSize="20" TextAlignment="Center">How many calories did you burn today?</TextBlock>
+
+        <!--#endregion-->
+
+        <!-- ==========================================================================
+             Select your exercise
+        ============================================================================== -->
+
+        <Grid>
+
+            <!--#region grid defintions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <!--#endregion-->
+
+            <Border Margin="15" BorderBrush="Black" BorderThickness="2">
+                <StackPanel Grid.Column="0" Margin="10">
+
+                    <!-- choosing activities-->
+                    <TextBlock >Choose Exercise</TextBlock>
+                    <ComboBox Name="cmbExercise" SelectionChanged="cmbExercise_SelectionChanged" />
+
+                    <!-- Your current selection -->
+                    <TextBlock Margin="0,25,0,5" >Selected Activity</TextBlock>
+                    <Border BorderBrush="Black" BorderThickness="1" Padding="5">
+                        <Grid>
+                            <!--#region grid definitions-->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <!--#endregion-->
+
+                            <!--#region property names -->
+                            <TextBlock Grid.Column="0" Grid.Row="0">Exercise</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="1">Description</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="2">Calories</TextBlock>
+                            <!--#endregion-->
+
+                            <!-- chosen exercise property -->
+                            <Border Grid.Column="1" Grid.Row="0" BorderBrush="#FFCACACA" BorderThickness="0,0,0,1" Padding="1">
+                                <TextBlock Name="txtExercise"/>
+                            </Border>
+                            <Border Grid.Column="1" Grid.Row="1" BorderBrush="#FFCACACA" BorderThickness="0,0,0,1" Padding="1">
+                                <TextBlock Name="txtDescription"/>
+                            </Border>
+                            <Border Grid.Column="1" Grid.Row="2" BorderBrush="#FFCACACA" BorderThickness="0,0,0,1" Padding="1">
+                                <TextBlock Name="txtCalories"/>
+                            </Border>
+
+                        </Grid>
+                    </Border>
+
+                    <!--#region accept selection -->
+                    <Grid Margin="0,20,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Name="btnAcceptCurrentSelection" Click="btnAcceptCurrentSelection_Click">Accept</Button>
+                        <Button Margin="5" Grid.Column="1" Name="btnCancelCurrentSelection" Click="btnCancelCurrentSelection_Click">Cancel</Button>
+                    </Grid>
+                    <!--#endregion-->
+                </StackPanel>
+            </Border>
+
+
+            <!-- ==========================================================================
+             Final Calorie Content
+        ============================================================================== -->
+
+
+            <Border Grid.Column="1" Margin="15" BorderBrush="Black" BorderThickness="2">
+                <StackPanel Grid.Column="0" Margin="10">
+
+                    <!--#region How many calories you burned -->
+                    <TextBlock FontSize="20" TextAlignment="Center" >You Burned</TextBlock>
+                    <Border BorderBrush="Gray" BorderThickness="1">
+                        <TextBlock Name="txtTotalCalories" FontSize="30" TextAlignment="Right">0</TextBlock>
+                    </Border>
+                    <!--#endregion-->
+
+
+                    <!--#region Total Calories -->
+                    <Grid Margin="0,20,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button Margin="5" Name="btnSubmit" Click="btnSubmit_Click">Submit</Button>
+                        <Button Margin="5" Grid.Column="1" Name="btnSubmitCancel" Click="btnSubmitCancel_Click">Cancel</Button>
+                    </Grid>
+                    <!--#endregion-->
+
+
+                </StackPanel>
+            </Border>
+        </Grid>
+    </StackPanel>
+</Window>

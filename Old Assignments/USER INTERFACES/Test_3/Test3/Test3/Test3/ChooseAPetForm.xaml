@@ -1,0 +1,28 @@
+﻿<Window x:Class="Test3.ChooseAPetForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test3"
+        mc:Ignorable="d"
+        Title="Choose Your Pet" Height="600" Width="300">
+    <StackPanel Margin="10">
+        <TextBlock Margin="10" FontFamily="Harlow Solid Italic" FontSize="22" TextAlignment="Center">Pet Adoption Centre</TextBlock>
+        <TextBlock Margin="5">Click on Thumbnail to see details</TextBlock>
+        <WrapPanel>
+            <Button Margin="5" Name="btnPet1" Click="btnPet_Click" >
+                <Image Height="50" Source="Images/cat1.jpeg"/>
+            </Button>
+            <Button  Margin="5" Name="btnPet2" Click="btnPet_Click" >
+                <Image Height="50" Source="Images/cat2.jpeg"/>
+            </Button>
+            <Button  Margin="5" Name="btnPet3" Click="btnPet_Click" >
+                <Image Height="50" Source="Images/cat3.jpeg"/>
+            </Button>
+            <Button  Margin="5" Name="btnPet4" Click="btnPet_Click" >
+                <Image Height="50" Source="Images/cat4.jpeg"/>
+            </Button>
+        </WrapPanel>
+        <TextBlock Margin="5" Name="txtChosenPet">You have not yet chosen a pet</TextBlock>
+    </StackPanel>
+</Window>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<body>
+    <select id="opt">
+        <option value="YUL">Montreal Pierre Elliot Trudeau Airport</option>
+        <option value="LAX">Los Angeles International Airport</option>
+        <option value="LGA">LaGuardia Airport</option>
+        <option value="CDG">Charles de Gaulle Airport</option>
+    </select>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <table id="tb">
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+        $( "#opt" ).change(function( event ) {
+        event.preventDefault();
+        var choice = document.getElementById("opt").value;
+        $.ajax({
+            url: "http://aviation-edge.com/v2/public/timetable?key=4cd82d-b04247&iataCode=" + choice +"&type=departure",
+            success: function(response) {
+                var rr = JSON.parse(response);
+                console.log(rr);
+                var tbl = $("#tb");
+                $("#tb tr").remove();
+                tbl.append("<th>Airline</th><th>Flight#</th><th>Terminal</th><th>Gate#</th><th>Destination Code</th>");
+                var thing1 = "<tr><td>"+rr[0].airline.name+"</td><td>"+rr[0].flight.number+"</td><td>"+rr[0].departure.terminal+"</td><td>"+rr[0].departure.gate+"</td><td>"+rr[0].arrival.iataCode+"</td></tr>";
+                var thing2 = "<tr><td>"+rr[1].airline.name+"</td><td>"+rr[1].flight.number+"</td><td>"+rr[1].departure.terminal+"</td><td>"+rr[1].departure.gate+"</td><td>"+rr[1].arrival.iataCode+"</td></tr>";
+                var thing3 = "<tr><td>"+rr[2].airline.name+"</td><td>"+rr[2].flight.number+"</td><td>"+rr[2].departure.terminal+"</td><td>"+rr[2].departure.gate+"</td><td>"+rr[2].arrival.iataCode+"</td></tr>";
+                tbl.append(thing1);
+                tbl.append(thing2);
+                tbl.append(thing3);
+                //All of these are what we look for but cant get them to display
+                //document.getElementById(para1).appendChild(` Airline: + ${rr[0].airline.name} + Flight #: + ${rr[0].flight.number} + Terminal: + ${rr[0].departure.terminal} + Gate #: + ${rr[0].departure.gate} + Destination Code: + ${rr[0].arrival.iataCode}`);
+                //document.getElementById(para2).appendChild(" Airline: " + rr[1].airline.name + " Flight #: " + rr[1].flight.number + " Terminal: " + rr[1].departure.terminal + " Gate #: " + rr[1].departure.gate + " Destination Code: " + rr[1].arrival.iataCode);
+                //document.getElementById(para4).appendChild(" Airline: " + rr[2].airline.name + " Flight #: " + rr[2].flight.number + " Terminal: " + rr[2].departure.terminal + " Gate #: " + rr[2].departure.gate + " Destination Code: " + rr[2].arrival.iataCode);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                alert("Error"); 
+            }
+        });
+    });
+	</script>
+</body>
+</html>

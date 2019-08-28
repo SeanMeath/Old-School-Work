@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="1753546"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-10-20 04:41:52 PM"/>
+        <attribute name="created" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTE4OyAwMjo1Mjo0MSBQTTsgMjI3Mw=="/>
+        <attribute name="edited" value="MTc1MzU0NjsgUEUzMjItMDRXOyAyMDE3LTEwLTIwOyAwNDo0MTo1MiBQTTsgMjI2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="AverageRain" type="Real" array="False" size="" variables="AverageRain"/>
+            <declare name="MaxRain" type="Integer" array="False" size="" variables="MaxRain"/>
+            <declare name="MinRain" type="Integer" array="False" size="" variables="MinRain"/>
+            <declare name="TotalRain" type="Integer" array="False" size="" variables="TotalRain"/>
+            <declare name="ARRAYSIZE" type="Integer" array="False" size="" variables="ARRAYSIZE"/>
+            <declare name="MyIndex" type="Integer" array="False" size="" variables="MyIndex"/>
+            <assign variable="ARRAYSIZE" expression="12"/>
+            <declare name="RainFall" type="Integer" array="True" size="ARRAYSIZE" variables="RainFall[ARRAYSIZE]"/>
+            <assign variable="MyIndex" expression="0"/>
+            <while expression="MyIndex&lt;ARRAYSIZE">
+                <output expression="&quot;What was the rainfall for the #&quot; &amp; MyIndex+1 &amp; &quot; month?&quot;"/>
+                <input variable="RainFall[MyIndex]"/>
+                <assign variable="MyIndex" expression="MyIndex+1"/>
+            </while>
+            <assign variable="TotalRain" expression="GetRain(RainFall,ARRAYSIZE)"/>
+            <output expression="&quot;This year there was a total rainfall of: &quot; &amp; TotalRain &amp; &quot;.&quot;"/>
+            <assign variable="AverageRain" expression="GetAverage(TotalRain,ARRAYSIZE)"/>
+            <output expression="&quot;The average rainfall per month is: &quot; &amp; ToFixed(AverageRain, 2) &amp; &quot;.&quot;"/>
+            <assign variable="MaxRain" expression="GetMax(RainFall,ARRAYSIZE)"/>
+            <output expression="&quot;The maximum rainfall this year was recorded during the month #&quot; &amp; MaxRain &amp; &quot;.&quot;"/>
+            <assign variable="MinRain" expression="GetMin(RainFall,ARRAYSIZE)"/>
+            <output expression="&quot;The minimum rainfall recorded this year was during the month #&quot; &amp; MinRain &amp; &quot;.&quot;"/>
+        </body>
+    </function>
+    <function name="GetAverage" type="Real" variable="Average">
+        <parameters>
+            <parameter name="D1" type="Integer" array="False"/>
+            <parameter name="D2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Average" type="Real" array="False" size="" variables="Average"/>
+            <assign variable="Average" expression="D1/D2"/>
+        </body>
+    </function>
+    <function name="GetMax" type="Integer" variable="MaxMonth">
+        <parameters>
+            <parameter name="D1" type="Integer" array="True"/>
+            <parameter name="D2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="MaxMonth" type="Integer" array="False" size="" variables="MaxMonth"/>
+            <declare name="Max" type="Integer" array="False" size="" variables="Max"/>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <assign variable="Max" expression="D1[Counter]"/>
+            <assign variable="MaxMonth" expression="Counter+1"/>
+            <while expression="Counter&lt;D2">
+                <if expression="D1[Counter]&gt;Max">
+                    <then>
+                        <assign variable="Max" expression="D1[Counter]"/>
+                        <assign variable="MaxMonth" expression="Counter+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+        </body>
+    </function>
+    <function name="GetMin" type="Integer" variable="MinMonth">
+        <parameters>
+            <parameter name="D1" type="Integer" array="True"/>
+            <parameter name="D2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="MinMonth" type="Integer" array="False" size="" variables="MinMonth"/>
+            <declare name="Min" type="Integer" array="False" size="" variables="Min"/>
+            <declare name="Counter" type="Integer" array="False" size="" variables="Counter"/>
+            <assign variable="Counter" expression="0"/>
+            <assign variable="Min" expression="D1[Counter]"/>
+            <assign variable="MinMonth" expression="Counter+1"/>
+            <while expression="Counter&lt;D2">
+                <if expression="D1[Counter]&lt;Min">
+                    <then>
+                        <assign variable="Min" expression="D1[Counter]"/>
+                        <assign variable="MinMonth" expression="Counter+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="Counter" expression="Counter+1"/>
+            </while>
+        </body>
+    </function>
+    <function name="GetRain" type="Integer" variable="MyReturn">
+        <parameters>
+            <parameter name="D1" type="Integer" array="True"/>
+            <parameter name="D2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size="" variables="i"/>
+            <comment text="MyIndex"/>
+            <assign variable="i" expression="0"/>
+            <declare name="MyReturn" type="Integer" array="False" size="" variables="MyReturn"/>
+            <assign variable="MyReturn" expression="0"/>
+            <while expression="i&lt;D2">
+                <assign variable="MyReturn" expression="MyReturn+D1[i]"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

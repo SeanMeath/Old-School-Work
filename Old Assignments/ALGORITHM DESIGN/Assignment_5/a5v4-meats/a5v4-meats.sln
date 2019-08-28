@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "a5v4-meats", "a5v4-meats.csproj", "{8321E91A-89CF-4705-BEE0-F9FDE1B01588}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8321E91A-89CF-4705-BEE0-F9FDE1B01588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8321E91A-89CF-4705-BEE0-F9FDE1B01588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8321E91A-89CF-4705-BEE0-F9FDE1B01588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8321E91A-89CF-4705-BEE0-F9FDE1B01588}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B548550-FC9D-460D-BABD-4B01058EB60C}
+	EndGlobalSection
+EndGlobal

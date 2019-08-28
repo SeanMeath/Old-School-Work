@@ -1,0 +1,9 @@
+2745|Brown|Jane|8.50
+1121|Smith|Brian|12.75
+8343|Jones|Nora|15.00
+4231|White|Allan|9.00
+5566|Moss|Peter|13.45
+2002|Clark|Mary|10.00
+9223|Edwards|Kim|13.00
+2341|Young|Ann|13.00
+5342|Peters|Peter|15.00

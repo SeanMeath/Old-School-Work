@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Sean Meath"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-02-04 11:50:35 PM"/>
+        <attribute name="created" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE4LTAyLTA0OyAwODo0NzoyMSBQTTsgMzM0OA=="/>
+        <attribute name="edited" value="U2VhbiBNZWF0aDsgREVTS1RPUC1EMVRUMDJVOyAyMDE4LTAyLTA0OyAxMTo1MDozNSBQTTsgMzM0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Asks the user for the population, birth rate, death rate and the number of years and computes the population over time. It then displays this to the user."/>
+            <declare name="success" type="Boolean" array="False" size=""/>
+            <declare name="population" type="Integer" array="False" size=""/>
+            <declare name="years" type="Integer" array="False" size=""/>
+            <declare name="currentPop" type="Real" array="False" size=""/>
+            <declare name="deathRate" type="Real" array="False" size=""/>
+            <declare name="birthRate" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the curent population?&quot;"/>
+            <input variable="population"/>
+            <while expression="population&lt;=0">
+                <output expression="&quot;Error! The number given does not fit in range (above 0). Please try again.&quot;"/>
+                <input variable="population"/>
+            </while>
+            <output expression="&quot;What is the curent death rate?&quot;"/>
+            <input variable="deathRate"/>
+            <while expression="deathRate&lt;0">
+                <output expression="&quot;Error! The number given does not fit in range (0 or above). Please try again.&quot;"/>
+                <input variable="deathRate"/>
+            </while>
+            <output expression="&quot;What is the curent birth rate?&quot;"/>
+            <input variable="birthRate"/>
+            <while expression="birthRate&lt;0">
+                <output expression="&quot;Error! The number given does not fit in range (0 or above). Please try again.&quot;"/>
+                <input variable="birthRate"/>
+            </while>
+            <output expression="&quot;How many years do you wish to calculate?&quot;"/>
+            <input variable="years"/>
+            <while expression="years&lt;=0">
+                <output expression="&quot;Error! The number given does not fit in range (above 0). Please try again.&quot;"/>
+                <input variable="years"/>
+            </while>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <for variable="counter" start="1" end="years" direction="inc" step="1">
+                <assign variable="currentPop" expression="GetCurrentPop(population, deathRate, birthRate)"/>
+                <assign variable="population" expression="currentPop"/>
+                <output expression="&quot;Year: &quot; &amp; counter &amp; &quot;   Population: &quot;&amp; int(currentPop)"/>
+            </for>
+        </body>
+    </function>
+    <function name="GetCurrentPop" type="Real" variable="currentPop">
+        <parameters>
+            <parameter name="population" type="Integer" array="False"/>
+            <parameter name="deathRate" type="Real" array="False"/>
+            <parameter name="birthRate" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="currentPop" type="Real" array="False" size=""/>
+            <assign variable="currentPop" expression="population+birthRate*population-deathRate*population"/>
+        </body>
+    </function>
+</flowgorithm>
