@@ -1,0 +1,26 @@
+#!/bin/bash
+cd ~ #b
+ls -a #c
+mkdir ~/dir3 #d
+mkdir -p ~/dir3/q4 #e
+cd /home/1753546/dir3/q4 #f
+touch test1 #g
+chmod 600 test1 #h
+chown aref test1 #i
+touch test2 #j
+cp test2 test3 #k
+ln test2 test4 #l
+ls -i | grep 'test[2,3,4]' #m
+ls -li | grep 'test2' | awk '{ print $3 }' #n
+pwd #o
+mv test3 test5 #p
+echo 'this is step #Q' > test5 #q
+echo 'this is step #R' >> test5 #r
+cat test5 #s
+cat test5 | sed -n '2p' #t
+wc -l -c test5 | awk '{ print $1, $2 }' #u
+rm test5 #v
+cat /etc/passwd | egrep "^1[0-9]{6}" | cut -f1 -d: | sort #w
+du -h /home | grep '/home/1753546$' | awk '{ print $1 }' #x NOT 100%
+whoami #y
+ps | awk '{ print $4 }' | sed -n '1!p' #z.

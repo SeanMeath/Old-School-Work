@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat /etc/passwd | egrep "^1[0-9]{6}" | cut -f5 -d: | sort

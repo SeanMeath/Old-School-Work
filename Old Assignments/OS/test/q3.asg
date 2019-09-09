@@ -1,0 +1,14 @@
+#!/bin/bash
+
+t=$(cat /var/test3q3 | awk '{ print $1 }' | sort | uniq | wc -l)
+v=$(cat /var/test3q3 | grep 'videotron.ca)$' | awk '{ print $1 }' | sort | uniq | wc -l)
+b=$(cat /var/test3q3 | grep 'bell.ca)$' | awk '{ print $1 }' | sort | uniq | wc -l)
+o=$(($t-$v-$b))
+
+vp=$(echo "scale=2 ; (100 * $v / $t)" | bc)
+bp=$(echo "scale=2 ; (100 * $b / $t)" | bc)
+op=$(echo "scale=2 ; (100 * $o / $t)" | bc)
+
+printf "%-42s%s%s \n" "Percentage of Videotron users:" $vp "%"
+printf "%-42s%s%s \n" "Percentage of Bell users:" $bp "%"
+printf "%-42s%s%s \n" 'Percentage of "other" users:' $op "%"
