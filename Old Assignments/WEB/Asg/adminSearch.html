@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Admin Search</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="adminSearch.js"></script>
+    </head>
+    <body>
+        <h1>Admin Search</h1>
+        <form action="adminSearch.php" method="POST"> 
+            <table border="1">
+                <tr>
+                    <td>Search For</td>
+                    <td><input type="text" name="searchFor_1" id="searchFor_1"></td>
+                </tr>
+
+                <tr>
+                    <td>Search Using</td>
+                    <td><select name="searchUsing_1">
+                            <option value="username">User Name</option>
+                            <option value="email">Email</option>
+                            <option value="firstname">First Name</option>
+                            <option value="lastname">Last Name</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Exact Match</td>
+                    <td><input type="checkbox" name="exactMatch_1" value="Yes"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center">
+                        <select name="operator" id="operator">
+                            <option value="done">Done</option>
+                            <option value="and">And</option>
+                            <option value="or">Or</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr id="searchFor_20">
+                    <td>Search For</td>
+                    <td><input type="text" name="searchFor_2" id="searchFor_2"></td>
+                </tr>
+                    
+                <tr id="searchUsing_2">
+                    <td>Search Using</td>
+                    <td>
+                        <select name="searchUsing_2">
+                            <option value="username">User Name</option>
+                            <option value="email">Email</option>
+                            <option value="firstname">First Name</option>
+                            <option value="lastname">Last Name</option>
+                        </select>
+                    </td>
+                </tr>
+                    
+                <tr id="exactMatch_2">
+                    <td>Exact Match</td>
+                    <td><input type="checkbox" name="exactMatch_2" value="Yes"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                    <input type="submit" value="Search Now" name="search" id="search">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+

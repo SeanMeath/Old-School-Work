@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="register.js"></script>
+        <title>Edit</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Edit</h1>
+        <p>hint: Stars are bad :(</p>
+        <form action="edit.php" method="post">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="fname" id="fname" maxlength="20" value={$fName}><p style="color:Tomato; display : none;" id="starA">*</p><br></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lname" id="lname" maxlength="50" value={$lName}><p style="color:Tomato; display : none;" id="starB">*</p><br></td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="user" id="user" maxlength="20" value={$user}><p style="color:Tomato; display : none;" id="star1">*</p><br></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{$email}</td>
+                <td><input type="hidden" name="email" id="email" value={$email}></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="pass" id="pass" maxlength="10" value={$password}><p style="color:Tomato; display : none;" id="star3">*</p><br></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" name="confirmPass" id="confirmPass" maxlength="10" value={$password}><p style="color:Tomato; display : none;" id="star4">*</p><br></td>
+            </tr>
+            <tr>
+                <td>Security Question:</td>
+                <td><input type="text" name="secQuestion" id="secQuestion" maxlength="100" value={$question}><p style="color:Tomato; display : none;" id="star5">*</p><br></td>
+            </tr>
+            <tr>
+                <td>Security Answer:</td>
+                <td><input type="text" name="secAnswer" id="secAnswer" maxlength="20" value={$answer}><p style="color:Tomato; display : none;" id="star6">*</p><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Edit Account" id="submit">
+                    </form>
+                </td>
+            </tr>        
+        </table>
+    </body>
+</html>

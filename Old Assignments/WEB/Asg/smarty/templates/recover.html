@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Recover Account</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Recover Account</h1>
+        <h2>You're account has been locked, to unlock it please answer your security question.</h2>
+        <form action="recover.php" method="post">
+        <table>
+            <tr>
+                <td>Security Question:</td>
+                <td>{$question}</td>
+            </tr>
+            <tr>
+                <td>Answer:</td>
+                <td><input type="text" name="answer" id="answer" maxlength="20"><p style="color:Tomato; display : none;" id="star">*</p><br></td>
+            </tr>
+            <tr>
+                <td><input type="hidden" value={$user} name="user"></td>
+                <td><input type="submit" value="Recover Account" id="submit"></td>
+            </tr>         
+        </table>
+    </form>
+    </body>
+</html>

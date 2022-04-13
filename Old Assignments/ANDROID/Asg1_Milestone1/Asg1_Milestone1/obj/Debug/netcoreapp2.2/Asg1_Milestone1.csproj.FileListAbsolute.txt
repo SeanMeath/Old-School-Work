@@ -1,0 +1,11 @@
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\bin\Debug\netcoreapp2.2\Asg1_Milestone1.deps.json
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\bin\Debug\netcoreapp2.2\Asg1_Milestone1.runtimeconfig.json
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\bin\Debug\netcoreapp2.2\Asg1_Milestone1.runtimeconfig.dev.json
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\bin\Debug\netcoreapp2.2\Asg1_Milestone1.dll
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\bin\Debug\netcoreapp2.2\Asg1_Milestone1.pdb
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\obj\Debug\netcoreapp2.2\Asg1_Milestone1.csprojAssemblyReference.cache
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\obj\Debug\netcoreapp2.2\Asg1_Milestone1.csproj.CoreCompileInputs.cache
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\obj\Debug\netcoreapp2.2\Asg1_Milestone1.AssemblyInfoInputs.cache
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\obj\Debug\netcoreapp2.2\Asg1_Milestone1.AssemblyInfo.cs
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\obj\Debug\netcoreapp2.2\Asg1_Milestone1.dll
+J:\GitHub\Current-School-Work\Asg1_Milestone1\Asg1_Milestone1\obj\Debug\netcoreapp2.2\Asg1_Milestone1.pdb

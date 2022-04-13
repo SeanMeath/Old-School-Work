@@ -1,0 +1,15 @@
+﻿@using Integration_Lab4.Models
+@model List<Book>
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<ul>
+    @foreach (Book b in Model)
+    {
+        <li>@b.Id - @b.Title</li>
+    }
+</ul>

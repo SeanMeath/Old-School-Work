@@ -1,0 +1,51 @@
+<head>
+    <title>Admin Search Results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="adminResult.js"></script>
+</head>
+<body>
+    <h1>Admin Search Results</h1>
+    
+    <form action="adminChangeSearchResult.php" method="post">
+        <table border="1">
+            <tr>
+                <th>User Name</th>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Modify</th>
+                <th>Delete</th>
+            </tr>
+            {foreach from=$trows item=aRow}
+                <tr>
+                    <input type="hidden" name="email_{$aRow.counter}" value={$aRow.email}>
+
+                    <td><label for="delete_{$aRow.counter}">{$aRow.username}</label></td>
+                    <td><label for="delete_{$aRow.counter}">{$aRow.email}</label></td>
+                    <td><label for="delete_{$aRow.counter}">{$aRow.firstName}</label></td>
+                    <td><label for="delete_{$aRow.counter}">{$aRow.lastName}</label></td>
+
+                    <td><input type="submit" name="modify_{$aRow.counter}" value="Modify"></td>
+                    <td><input type="checkbox" name="delete_{$aRow.counter}" id="delete_{$aRow.counter}" value={$aRow.email}></td>
+                </tr>
+            {/foreach}
+        </table>
+
+        <br>
+
+        <input type="hidden" name="totalRows" value="{$counter}">
+      <input type="submit" name="delete" id="delete" value="Delete Selected Accounts">
+    </form>
+
+    <br>
+
+    <table>
+        <tr>
+            <td><button id="select_all">Select All</button></td>
+            <td><button id="clear_all">Clear All</button></td>
+            <td><button id="select_others">Select Others</button></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Error</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Errors</h1>
+        <p>Please correct the following errors:<br><br>
+            {$errors}
+        </p>
+        {if (isset($recUser))}
+            <form action="recover.php" method="post">
+                <input type="hidden" value={$recUser} name="user">
+                <input type="submit" value="I wish to unlock my account" id="submit">
+            </form>
+        {/if}
+    </body>
+</html>
